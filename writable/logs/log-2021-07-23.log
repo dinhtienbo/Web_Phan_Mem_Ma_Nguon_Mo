@@ -1,0 +1,227 @@
+CRITICAL - 2021-07-23 09:15:06 --> Call to undefined method App\Models\ProductModel::getListproductCha
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(76): CodeIgniter\Model->__call('getListproductC...', Array)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Addproduct()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-23 09:16:23 --> Invalid file: admin/pages/product/catalog/add-product.php
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/pro...')
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/pro...', Array, true)
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(88): view('admin/pages/pro...', Array)
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(77): App\Controllers\BaseController->loadMastLayout(Array, 'Th\xC3\xAAm s\xE1\xBA\xA3n ph\xE1...', 'admin/pages/pro...', Array, Array, Array)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Addproduct()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#9 {main}
+CRITICAL - 2021-07-23 09:17:14 --> Invalid file: admin/pages/product/catalog/add-product.php
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/pages/pro...')
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/pro...', Array, true)
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(88): view('admin/pages/pro...', Array)
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(77): App\Controllers\BaseController->loadMastLayout(Array, 'Th\xC3\xAAm s\xE1\xBA\xA3n ph\xE1...', 'admin/pages/pro...', Array, Array, Array)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Addproduct()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#9 {main}
+CRITICAL - 2021-07-23 09:18:47 --> Undefined property: stdClass::$subs
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Views\admin\pages\product\add-product.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 95)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\Bai_Tap\\Dai_...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/pro...', Array, true)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(88): view('admin/pages/pro...', Array)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(77): App\Controllers\BaseController->loadMastLayout(Array, 'Th\xC3\xAAm s\xE1\xBA\xA3n ph\xE1...', 'admin/pages/pro...', Array, Array, Array)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Addproduct()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#11 {main}
+CRITICAL - 2021-07-23 10:17:59 --> Undefined property: App\Controllers\admin\AdminProductController::$input
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 93)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-23 10:18:25 --> Undefined property: App\Controllers\admin\AdminProductController::$input
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 93)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-23 10:20:31 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::post()
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#5 {main}
+CRITICAL - 2021-07-23 10:24:38 --> Undefined variable $imageName
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 108)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-23 10:25:31 --> Undefined variable $imageName
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 108)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-23 10:25:33 --> Undefined variable $imageName
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 108)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-23 10:27:26 --> Undefined variable $imageName
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 109)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-23 10:28:05 --> Undefined property: App\Controllers\admin\AdminProductController::$input
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 121)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-23 10:28:35 --> Call to undefined function App\Controllers\admin\now()
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#5 {main}
+CRITICAL - 2021-07-23 10:30:10 --> CodeIgniter\Validation\Validation::withRequest(): Argument #1 ($request) must be of type CodeIgniter\HTTP\RequestInterface, array given, called in D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php on line 250
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(250): CodeIgniter\Validation\Validation->withRequest(Array)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(141): App\Controllers\admin\AdminProductController->Check(Array)
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(133): App\Controllers\admin\AdminProductController->ActionCreate(Array, Object(App\Models\ProductModel), 'create')
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#8 {main}
+CRITICAL - 2021-07-23 11:02:52 --> foreach() argument must be of type array|object, null given
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'D:\\Bai_Tap\\Dai_...', 113)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-23 11:03:41 --> The uploaded file has already been moved.
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\HTTP\Files\UploadedFile.php(138): CodeIgniter\HTTP\Exceptions\HTTPException::forAlreadyMoved()
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(116): CodeIgniter\HTTP\Files\UploadedFile->move('./public/upload...', 'D:\\Bai_Tap\\Dai_...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-23 11:03:58 --> The original file is not a valid file.
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\HTTP\Files\UploadedFile.php(143): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(116): CodeIgniter\HTTP\Files\UploadedFile->move('./public/upload...', 'D:\\Bai_Tap\\Dai_...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-23 11:04:43 --> The original file is not a valid file.
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\HTTP\Files\UploadedFile.php(143): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(116): CodeIgniter\HTTP\Files\UploadedFile->move('./public/upload...', '1627056283_0206...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-23 11:04:55 --> The original file is not a valid file.
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\HTTP\Files\UploadedFile.php(143): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidFile()
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(116): CodeIgniter\HTTP\Files\UploadedFile->move('./public/upload...', '1627056295_4d90...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-23 11:13:40 --> CodeIgniter\Validation\Validation::withRequest(): Argument #1 ($request) must be of type CodeIgniter\HTTP\RequestInterface, array given, called in D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php on line 253
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(253): CodeIgniter\Validation\Validation->withRequest(Array)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(144): App\Controllers\admin\AdminProductController->Check(Array)
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(136): App\Controllers\admin\AdminProductController->ActionCreate(Array, Object(App\Models\ProductModel), 'create')
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#8 {main}
+CRITICAL - 2021-07-23 11:17:00 --> foreach() argument must be of type array|object, null given
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'D:\\Bai_Tap\\Dai_...', 113)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-23 11:17:33 --> foreach() argument must be of type array|object, null given
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argum...', 'D:\\Bai_Tap\\Dai_...', 113)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-23 11:18:56 --> CodeIgniter\Validation\Validation::withRequest(): Argument #1 ($request) must be of type CodeIgniter\HTTP\RequestInterface, array given, called in D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php on line 254
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(254): CodeIgniter\Validation\Validation->withRequest(Array)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(145): App\Controllers\admin\AdminProductController->Check(Array)
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(137): App\Controllers\admin\AdminProductController->ActionCreate(Array, Object(App\Models\ProductModel), 'create')
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#8 {main}
+CRITICAL - 2021-07-23 11:19:20 --> CodeIgniter\Validation\Validation::withRequest(): Argument #1 ($request) must be of type CodeIgniter\HTTP\RequestInterface, array given, called in D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php on line 254
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(254): CodeIgniter\Validation\Validation->withRequest(Array)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(145): App\Controllers\admin\AdminProductController->Check(Array)
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(137): App\Controllers\admin\AdminProductController->ActionCreate(Array, Object(App\Models\ProductModel), 'create')
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#8 {main}
+ERROR - 2021-07-23 11:22:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '), '22', '12', 'ko', '', '', '', '', '2021-07-23 11:21:59')' at line 1
+CRITICAL - 2021-07-23 11:22:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '), '22', '12', 'ko', '', '', '', '', '2021-07-23 11:21:59')' at line 1
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(329): mysqli->query('INSERT INTO `pr...')
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(647): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2277): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Models\BaseModel.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(139): App\Models\BaseModel->create(Array)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Create()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#11 {main}

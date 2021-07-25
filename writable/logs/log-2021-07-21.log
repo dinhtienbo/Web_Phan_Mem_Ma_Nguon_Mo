@@ -1,0 +1,349 @@
+CRITICAL - 2021-07-21 03:02:48 --> Array to string conversion
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Bai_Tap\\Dai_...', 18)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Models\ProductModel.php(18): implode('UNION', Array)
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(49): App\Models\ProductModel->search('2', 'LG', '17')
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#8 {main}
+CRITICAL - 2021-07-21 03:04:12 --> [] operator not supported for strings
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(49): App\Models\ProductModel->search('2', 'LG', '17')
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-21 03:04:23 --> Array to string conversion
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Bai_Tap\\Dai_...', 19)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Models\ProductModel.php(19): implode('UNION', Array)
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(49): App\Models\ProductModel->search('2', 'LG', '17')
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#8 {main}
+CRITICAL - 2021-07-21 03:07:14 --> Array to string conversion
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Bai_Tap\\Dai_...', 19)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Models\ProductModel.php(19): implode('UNION', Array)
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(49): App\Models\ProductModel->search('2', 'LG', '17')
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#8 {main}
+CRITICAL - 2021-07-21 03:11:02 --> Array to string conversion
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Models\ProductModel.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\Bai_Tap\\Dai_...', 19)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(49): App\Models\ProductModel->search('2', 'LG', '17')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-21 03:12:14 --> Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(49): App\Models\ProductModel->search('2', 'LG', '17')
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-21 03:13:49 --> Undefined variable $sql2
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Models\ProductModel.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 18)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(49): App\Models\ProductModel->search('2', 'LG', '17')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-21 03:14:34 --> Undefined variable $sql1
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Models\ProductModel.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 18)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(49): App\Models\ProductModel->search('2', 'LG', '17')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-21 03:21:15 --> Undefined variable $sql2
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Models\ProductModel.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 18)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(49): App\Models\ProductModel->search('2', '', '17')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-21 03:32:13 --> Undefined variable $catalogs
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Views\admin\pages\product\list-product.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 153)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\Bai_Tap\\Dai_...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/pro...', Array, true)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(88): view('admin/pages/pro...', Array)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(44): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/pro...', Array, Array, Array)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#11 {main}
+CRITICAL - 2021-07-21 03:32:34 --> Undefined variable $catalogs
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Views\admin\pages\product\list-product.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 153)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\Bai_Tap\\Dai_...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/pro...', Array, true)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(88): view('admin/pages/pro...', Array)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(44): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/pro...', Array, Array, Array)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#11 {main}
+CRITICAL - 2021-07-21 03:50:03 --> Undefined property: App\Controllers\admin\AdminProductController::$ProducModel
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 41)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-21 03:50:58 --> Undefined variable $catalogs
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Views\admin\pages\product\list-product.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 153)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\Bai_Tap\\Dai_...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/pro...', Array, true)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(88): view('admin/pages/pro...', Array)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(44): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/pro...', Array, Array, Array)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#11 {main}
+CRITICAL - 2021-07-21 03:51:30 --> Attempt to read property "id" on array
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Views\admin\pages\product\list-product.php(208): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\Bai_Tap\\Dai_...', 208)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\Bai_Tap\\Dai_...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/pro...', Array, true)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(88): view('admin/pages/pro...', Array)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(45): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/pro...', Array, Array, Array)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#11 {main}
+CRITICAL - 2021-07-21 03:53:25 --> Call to a member function paginate() on array
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#5 {main}
+CRITICAL - 2021-07-21 04:09:59 --> Undefined property: App\Controllers\admin\AdminProductController::$load
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 44)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-21 04:22:26 --> Undefined property: App\Controllers\admin\AdminProductController::$pt
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 40)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-21 04:23:32 --> Undefined property: App\Controllers\admin\AdminProductController::$pt
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 40)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-21 04:24:28 --> Undefined property: App\Controllers\admin\AdminProductController::$pt
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 40)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#6 {main}
+CRITICAL - 2021-07-21 04:44:14 --> Undefined property: CodeIgniter\View\View::$input
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Views\admin\pages\product\list-product.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 161)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\Bai_Tap\\Dai_...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/pro...', Array, true)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(88): view('admin/pages/pro...', Array)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(44): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/pro...', Array, Array, Array)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#11 {main}
+CRITICAL - 2021-07-21 04:44:32 --> Undefined property: CodeIgniter\View\View::$input
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Views\admin\pages\product\list-product.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 161)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\Bai_Tap\\Dai_...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/pro...', Array, true)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(88): view('admin/pages/pro...', Array)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(44): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/pro...', Array, Array, Array)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#11 {main}
+CRITICAL - 2021-07-21 04:45:07 --> Undefined property: CodeIgniter\View\View::$input
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Views\admin\pages\product\list-product.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 161)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\Bai_Tap\\Dai_...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/pro...', Array, true)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(88): view('admin/pages/pro...', Array)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(44): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/pro...', Array, Array, Array)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#11 {main}
+CRITICAL - 2021-07-21 04:45:24 --> Undefined property: CodeIgniter\View\View::$input
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Views\admin\pages\product\list-product.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 161)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\Bai_Tap\\Dai_...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/pro...', Array, true)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(88): view('admin/pages/pro...', Array)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(45): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/pro...', Array, Array, Array)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#11 {main}
+CRITICAL - 2021-07-21 04:45:25 --> Undefined property: CodeIgniter\View\View::$input
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Views\admin\pages\product\list-product.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 161)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\Bai_Tap\\Dai_...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/pro...', Array, true)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(88): view('admin/pages/pro...', Array)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminProductController.php(45): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/pro...', Array, Array, Array)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#11 {main}
+CRITICAL - 2021-07-21 04:48:33 --> Undefined property: CodeIgniter\View\View::$input
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Views\admin\pages\product\list-product.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\Bai_Tap\\Dai_...', 161)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\Bai_Tap\\Dai_...')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/pro...', Array, true)
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Controllers\BaseController.php(88): view('admin/pages/pro...', Array)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Controllers\admin\AdminProductController.php(45): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/pro...', Array, Array, Array)
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->index()
+#7 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#8 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#11 {main}
+CRITICAL - 2021-07-21 04:50:01 --> Undefined variable $sql1
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Models\ProductModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 21)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Controllers\admin\AdminProductController.php(57): App\Models\ProductModel->search('', '', '7')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-21 04:50:37 --> Undefined variable $sql1
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Models\ProductModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 21)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Controllers\admin\AdminProductController.php(57): App\Models\ProductModel->search('', '', '6')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-21 04:51:27 --> Undefined variable $sql1
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Models\ProductModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 21)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Controllers\admin\AdminProductController.php(57): App\Models\ProductModel->search('', '', '6')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-21 04:51:31 --> Undefined variable $sql1
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Models\ProductModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 21)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Controllers\admin\AdminProductController.php(57): App\Models\ProductModel->search('', '', '6')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-21 04:51:39 --> Undefined variable $sql1
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Models\ProductModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 21)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Controllers\admin\AdminProductController.php(57): App\Models\ProductModel->search('', '', '6')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-21 04:53:40 --> Undefined variable $sql1
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Models\ProductModel.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 22)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Controllers\admin\AdminProductController.php(57): App\Models\ProductModel->search('', '', '17')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-21 04:55:04 --> Undefined variable $sql1
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Models\ProductModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 21)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Controllers\admin\AdminProductController.php(57): App\Models\ProductModel->search('', '', '17')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-21 04:56:18 --> Undefined variable $sql1
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Models\ProductModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 21)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Controllers\admin\AdminProductController.php(57): App\Models\ProductModel->search('', '', '17')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-21 05:00:26 --> Undefined variable $sql1
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Models\ProductModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 21)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Controllers\admin\AdminProductController.php(57): App\Models\ProductModel->search('', '', '7')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
+CRITICAL - 2021-07-21 05:01:01 --> Undefined variable $sql1
+#0 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Models\ProductModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\Bai_Tap\\Dai_...', 21)
+#1 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\app\Controllers\admin\AdminProductController.php(57): App\Models\ProductModel->search('', '', '5')
+#2 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminProductController->Search()
+#3 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminProductController))
+#4 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\Bai_Tap\Dai_Hoc\Hoc_Ky_7\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo1\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\Bai_Tap\\Dai_...')
+#7 {main}
