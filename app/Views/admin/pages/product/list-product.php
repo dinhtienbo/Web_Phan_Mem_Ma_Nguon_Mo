@@ -244,11 +244,11 @@
                                 <a href="product/view/9.html" target='_blank' class='tipS' title="Xem chi tiết sản phẩm">
                                     <img src="acsset/admin/images/icons/color/view.png" />
                                 </a>
-                                <a href="admin/List-Category/Edit/<?= $row['id'] ?>" title="Chỉnh sửa" class="tipS">
+                                <a href="admin/List-Product/Edit/<?= $row->id ?>" title="Chỉnh sửa" class="tipS">
                                     <img src="acsset/admin/images/icons/color/edit.png" />
                                 </a>
 
-                                <a href="admin/product/del/9.html" title="Xóa" class="tipS verify_action">
+                                <a href="admin/List-Product/Delete/<?= $row->id ?>" onClick="return confirm('Bạn có muốn xóa?')" title="Xóa" class="tipS verify_action">
                                     <img src="acsset/admin/images/icons/color/delete.png" />
                                 </a>
                             </td>

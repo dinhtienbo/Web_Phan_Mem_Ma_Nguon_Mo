@@ -118,7 +118,7 @@
 
 
                 <div class="formSubmit">
-                    <input type="submit" class="redB" value="Thêm mới">
+                    <input type="submit" class="redB" value="Sửa">
                 </div>
             </fieldset>
         </form>

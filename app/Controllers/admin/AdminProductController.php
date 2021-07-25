@@ -92,13 +92,6 @@ class AdminProductController extends BaseController
     {
         if ($this->request->getMethod() == 'post') {
 
-            $name        = $this->request->getPost('name');
-            $catalog_id  = $this->request->getPost('catalog');
-            $price       = $this->request->getPost('price');
-            $price       = str_replace(',', '', $price);
-            $discount = $this->request->getPost('discount');
-            $discount = str_replace(',', '', $discount);
-
             //Ảnh
             //Avatar
             $image_link = '';
@@ -122,8 +115,8 @@ class AdminProductController extends BaseController
             $time = $time->format('Y-m-d H:i:s');
            
             $requestData = [
-                'name'       => $name,
-                'catalog_id' => $catalog_id,
+                'name'       => $this->request->getPost('name'),
+                'catalog_id' => $this->request->getPost('catalog_id'),
                 'price'      => $this->request->getPost('price'),
                 'image_link' => (string)$image_link,
                 'image_list' => $str,
@@ -175,7 +168,8 @@ class AdminProductController extends BaseController
     //Hàm sửa
     public function ActionEdit($requestData, $model1, $string, $id)
     {
-        $validate = $this->CheckEdit($requestData);
+        $requestData1=$this->request;
+        $validate = $this->CheckEdit($requestData1);
         if ($validate->getErrors()) {
             return [
                 'status' => ResultUtils::STATUS_CODE_ERR,
@@ -183,7 +177,7 @@ class AdminProductController extends BaseController
                 'messages' => $validate->getErrors(),
             ];
         }
-        $dataSave = $requestData->getPost();
+        $dataSave = $requestData;
         try {
             $model1->$string($id, $dataSave);
             return [
@@ -206,21 +200,19 @@ class AdminProductController extends BaseController
         $rule = [
             'name' => 'max_length[100]',
 
-            'parent_id' => 'numeric',
-            'sort_order' => 'numeric'
+            'price' => 'numeric',
+            
         ];
         $message = [
             'name' => [
-                'max_length' => 'Tên danh mục quá dài, vui lòng nhập {param} ký tự!',
+                'max_length' => 'Tên sản phẩm quá dài, vui lòng nhập {param} ký tự!',
             ],
 
-            'parent_id' => [
-                'numeric' => 'Parent_id phải là số nguyên',
+            'price' => [
+                'numeric' => 'Giá phải là số ',
             ],
 
-            'sort_order' => [
-                'numeric' => 'Thứ tự hiển thị phải là số nguyên',
-            ],
+           
 
         ];
 
@@ -265,17 +257,66 @@ class AdminProductController extends BaseController
     public function EditProduct($id)
     {
         $data = [];
-        $dataLayout['product'] = json_decode(json_encode($this->product->getById($id)), True); //Chuyển object thành mảng
+        $dataLayout['product'] = $this->product->getById($id); //Chuyển object thành mảng
 
-        if (count($dataLayout['product']) == 0)
+        //Lấy danh mục
+        $catalogs = $this->category->getListCategoryCha(0);
+        foreach ($catalogs as $row) {
+
+            $subs = $this->category->getListCategoryCha($row->id);
+            $row->subs = $subs;
+        }
+        $dataLayout['catalogs']=$catalogs;
+        if (!isset($dataLayout['product']))
             return redirect('error/404');
-        $data = $this->loadMastLayout($data, "Sửa thông tin danh mục", "admin/pages/product/catalog/edit-product", $dataLayout, [], []);
+        $data = $this->loadMastLayout($data, "Sửa thông tin danh mục", "admin/pages/product/edit-product", $dataLayout, [], []);
         return view('admin/main', $data);
     }
 
     public function Edit($id)
     {
-        $requestData = $this->request;
+        //Ảnh
+            //Avatar
+            $image_link = '';
+            $file = $this->request->getFile('image');
+            if ($file->isValid()) {
+                $newName = $file->getName();
+                $file->move('./upload/product', $newName);
+                $image_link = $newName;
+            }
+            //Multi
+            $fileMulti = $this->request->getFiles();
+            $image_list = array();
+            if(($fileMulti['image_list'])==null)
+            {
+                foreach ($fileMulti['image_list'] as $row) {
+                    $newName = $row->getName();
+                    $row->move('./upload/product', $newName);
+                    $image_list[] = $newName;
+                }
+            }
+            else $image_link="";
+            //Nối chuỗi
+            $str = implode (",", $image_list);
+            $time = new Time('now','Asia/Ho_Chi_Minh');
+            $time = $time->format('Y-m-d H:i:s');
+           
+            $requestData = [
+                'name'       => $this->request->getPost('name'),
+                'catalog_id' => $this->request->getPost('catalog_id'),
+                'price'      => $this->request->getPost('price'),
+                'image_link' => (string)$image_link,
+                'image_list' => $str,
+                'discount'   => $this->request->getPost('discount'),
+                'warranty'   => $this->request->getPost('warranty'),
+                'gifts'      => $this->request->getPost('gifts'),
+                'site_title' => $this->request->getPost('site_title'),
+                'meta_desc'  => $this->request->getPost('meta_desc'),
+                'meta_key'   => $this->request->getPost('meta_key'),
+                'content'    => $this->request->getPost('content'),
+                'created' => $time
+
+            ];
         if ($this->request->getMethod() == 'post') {
             $result = $this->ActionEdit($requestData, $this->product, 'edit', $id);
 
@@ -287,6 +328,6 @@ class AdminProductController extends BaseController
     {
         $data = json_decode(json_encode($this->product->getById($id)), True);
         $this->product->Delete($id);
-        return redirect("admin/List-product");
+        return redirect("admin/List-Product");
     }
 }
