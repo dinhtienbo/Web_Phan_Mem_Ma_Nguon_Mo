@@ -21,4 +21,6 @@ class ProductModel extends BaseModel
         $sql = array_merge($sql1,$sql2,$sql3);//Gộp 2 lệnh sql
         return $sql;
     }
+
+    
 }

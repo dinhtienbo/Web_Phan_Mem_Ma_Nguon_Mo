@@ -8,6 +8,7 @@ use App\Models\CategoryModel;
 use App\Common\ResultUtils;
 use Exception;
 use CodeIgniter\I18n\Time;
+use DateTime;
 
 class AdminProductController extends BaseController
 {
@@ -103,44 +104,50 @@ class AdminProductController extends BaseController
             $image_link = '';
             $file = $this->request->getFile('image');
             if ($file->isValid()) {
-                $newName = $file->getRandomName();
-                $file->move('./public/upload/product', $newName);
+                $newName = $file->getName();
+                $file->move('./upload/product', $newName);
                 $image_link = $newName;
             }
             //Multi
             $fileMulti = $this->request->getFiles();
             $image_list = array();
             foreach ($fileMulti['image_list'] as $row) {
-                $newName = $row->getRandomName();
-                $row->move('./public/upload/product', $newName);
+                $newName = $row->getName();
+                $row->move('./upload/product', $newName);
                 $image_list[] = $newName;
             }
-            $requestData = array(
+            //Nối chuỗi
+            $str = implode (",", $image_list);
+            $time = new Time('now','Asia/Ho_Chi_Minh');
+            $time = $time->format('Y-m-d H:i:s');
+           
+            $requestData = [
                 'name'       => $name,
                 'catalog_id' => $catalog_id,
-                'price'      => $price,
-                'image_link' => $image_link,
-                'image_list' => $image_list,
-                'discount'   => $discount,
+                'price'      => $this->request->getPost('price'),
+                'image_link' => (string)$image_link,
+                'image_list' => $str,
+                'discount'   => $this->request->getPost('discount'),
                 'warranty'   => $this->request->getPost('warranty'),
                 'gifts'      => $this->request->getPost('gifts'),
                 'site_title' => $this->request->getPost('site_title'),
                 'meta_desc'  => $this->request->getPost('meta_desc'),
                 'meta_key'   => $this->request->getPost('meta_key'),
                 'content'    => $this->request->getPost('content'),
-                'created'    => new Time('now'),
+                'created' => $time
 
-            );
+            ];
 
             $result = $this->ActionCreate($requestData, $this->product, 'create');
-            return redirect()->back()->withInput()->with($result['messageCode'], $result['messages']);
+            return redirect()->back()->withInput()->with($result['messageCode'],$result['messages']);
         }
     }
 
     //Hàm thêm
     public function ActionCreate($requestData, $model1, $string)
     {
-        $validate = $this->Check($requestData);
+        $requestData1=$this->request;
+        $validate = $this->Check($requestData1);
         if ($validate->getErrors()) {
             return [
                 'status' => ResultUtils::STATUS_CODE_ERR,
@@ -148,7 +155,7 @@ class AdminProductController extends BaseController
                 'messages' => $validate->getErrors(),
             ];
         }
-        $dataSave = $requestData->getPost();
+        $dataSave = $requestData;
         try {
             $model1->$string($dataSave);
             return [

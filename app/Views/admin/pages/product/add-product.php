@@ -1,7 +1,82 @@
-<div class="wrapper">
+<div id="rightSide">
 
+    <!-- Account panel top -->
+
+    <div class="topNav">
+        <div class="wrapper">
+            <div class="welcome">
+                <span>Xin chào: <b>admin!</b></span>
+            </div>
+
+            <div class="userNav">
+                <ul>
+                    <li><a href="http://localhost/webphp/" target="_blank">
+                            <img style="margin-top:7px;" src="acsset/admin/images/icons/light/home.png" />
+                            <span>Trang chủ</span>
+                        </a></li>
+
+                    <!-- Logout -->
+                    <li><a href="home/logout.html">
+                            <img src="acsset/admin/images/icons/topnav/logout.png" alt="" />
+                            <span>Đăng xuất</span>
+                        </a></li>
+
+                </ul>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+
+    <script type="text/javascript">
+        (function($) {
+            $(document).ready(function() {
+                var main = $('#form');
+
+                // Tabs
+                main.contentTabs();
+            });
+        })(jQuery);
+    </script>
+
+    <!-- Title area -->
+    <div class="titleArea">
+        <div class="wrapper">
+            <div class="pageTitle">
+                <h5>Sản phẩm</h5>
+                <span>Quản lý sản phẩm</span>
+            </div>
+
+            <div class="horControlB menu_action">
+                <ul>
+                    <li><a href="admin/List-Product/Add">
+                            <img src="acsset/admin/images/icons/control/16/add.png" />
+                            <span>Thêm mới</span>
+                        </a></li>
+
+                    <li><a href="admin/List-Product">
+                            <img src="acsset/admin/images/icons/control/16/list.png" />
+                            <span>Danh sách</span>
+                        </a></li>
+
+                </ul>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="line"></div>
+
+
+    <!-- Message -->
+    <!-- Main content wrapper -->
+    <div class="wrapper">
+    
     <!-- Form -->
     <form enctype="multipart/form-data" method="post" action="admin/List-Product/Create" id="form" class="form">
+    <?= view('message/messageUser') ?>
         <fieldset>
             <div class="widget">
                 <div class="title">
