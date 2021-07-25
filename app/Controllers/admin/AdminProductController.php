@@ -108,14 +108,12 @@ class AdminProductController extends BaseController
                 $image_link = $newName;
             }
             //Multi
-            $fileMulti = $this->request->getFileMultiple('image_list');
+            $fileMulti = $this->request->getFiles();
             $image_list = array();
-            if (isset($fileMulti)) {
-                foreach ($fileMulti as $row) {
-                    $newName = $row->getRandomName();
-                    $row->move('./public/upload/product', $newName);
-                    $image_list[] = $newName;
-                }
+            foreach ($fileMulti['image_list'] as $row) {
+                $newName = $row->getRandomName();
+                $row->move('./public/upload/product', $newName);
+                $image_list[] = $newName;
             }
             $requestData = array(
                 'name'       => $name,

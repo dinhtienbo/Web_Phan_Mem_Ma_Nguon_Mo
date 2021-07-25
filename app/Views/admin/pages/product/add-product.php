@@ -43,7 +43,7 @@
                             <label class="formLeft">Ảnh kèm theo:</label>
                             <div class="formRight">
                                 <div class="left">
-                                    <input type="file" multiple="" name="image_list" id="image_list" size="25">
+                                    <input type="file" multiple name="image_list[]" id="image_list" size="25">
                                 </div>
                                 <div class="clear error" name="image_list_error"></div>
                             </div>
