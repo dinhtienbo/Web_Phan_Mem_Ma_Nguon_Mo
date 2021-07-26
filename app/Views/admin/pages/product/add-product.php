@@ -210,7 +210,7 @@
                         <div class="formRow hide"></div>
                     </div>
 
-                    <div class="tab_content pd0" id="tab2" style="display: none;">
+                    <div class="tab_content pd0" id="tab2" >
 
                         <div class="formRow">
                             <label for="param_site_title" class="formLeft">Title:</label>
@@ -244,7 +244,7 @@
                         <div class="formRow hide"></div>
                     </div>
 
-                    <div class="tab_content pd0" id="tab3" style="display: none;">
+                    <div class="tab_content pd0" id="tab3" >
                         <div class="formRow">
                             <label class="formLeft">Nội dung:</label>
                             <div class="formRight">
@@ -261,7 +261,7 @@
 
                 <div class="formSubmit">
                     <input type="submit" class="redB" value="Thêm mới">
-                    <input type="reset" class="basic" value="Hủy bỏ" >
+                    <input type="reset" onclick="location.href='admin/List-Product'" class="basic" value="Hủy bỏ" >
                 </div>
                 <div class="clear"></div>
             </div>
