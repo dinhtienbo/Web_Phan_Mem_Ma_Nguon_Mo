@@ -38,7 +38,7 @@ class UserService extends BaseService
         }
         $dataSave=$requestData->getPost();
         unset($dataSave['password_confirm']);
-        $dataSave['password']=password_hash($dataSave['password'],PASSWORD_BCRYPT);
+        $dataSave['password']=md5($dataSave['password']);
         try{
             $this->users->save($dataSave);
             return[
@@ -100,5 +100,76 @@ class UserService extends BaseService
     public function getUserByID($idUser)
     {
         return $this->users->where('id',$idUser)->first();
+    }
+
+
+    public function check($requestData)
+	{
+		$validate = $this->validateLogin($requestData);
+
+		if($validate ->getErrors()){
+            return[
+                'status'=>ResultUtils::STATUS_CODE_ERR,
+                'messageCode'=>ResultUtils::MESSAGE_CODE_ERR,
+                'messages'=>$validate ->getErrors(),
+            ];
+        }
+        
+        //User
+        $params = $requestData->getPost();
+        $user = $this->users->where('email',$params['email'])->first();
+
+        if(!$user){
+            return[
+                'status'=>ResultUtils::STATUS_CODE_ERR,
+                'messageCode'=>ResultUtils::MESSAGE_CODE_ERR,
+                'messages'=>['noExist'=>'Email chưa được đăng ký!'],
+            ];
+        }
+
+        if(md5($params['password'])!= $user['password']){
+            return[
+                'status'=>ResultUtils::STATUS_CODE_ERR,
+                'messageCode'=>ResultUtils::MESSAGE_CODE_ERR,
+                'messages'=>['wrongPass'=>'Mật khẩu không đúng!'],
+            ];
+        }
+
+        $session = session();
+        unset($user['password']);
+        $session ->set('login_user',$user);
+
+        return[
+            'status'=>ResultUtils::STATUS_CODE_OK,
+            'messageCode'=>ResultUtils::MESSAGE_CODE_OK,
+            'messages'=>null,
+        ];
+
+	}
+
+
+	private function validateLogin($requestData)
+    {
+        $rule = [
+			'email' => 'valid_email',
+            'password' => 'max_length[30]|min_length[6]',
+        ];
+        $message = [
+            'email' => [
+                'valid_email' => 'Tài khoản {filed} {value} không đúng định dạng!',
+            ],
+
+            'password' => [
+                'max_length' => 'Mật khẩu quá dài, vui lòng nhập chỉ từ {param} ký tự!',
+				'min_length' => 'Mật khẩu không được ít hơn {param} ký tự!',
+            ],
+
+
+        ];
+
+        $this->validation->setRules($rule, $message);
+        $this->validation->withRequest($requestData)->run();
+
+        return $this->validation;
     }
 }

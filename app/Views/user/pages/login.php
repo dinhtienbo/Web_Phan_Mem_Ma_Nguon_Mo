@@ -7,9 +7,10 @@
                 <div class="login-form">
                     <!--login form-->
                     <h2>Login to your account</h2>
-                    <form action="#">
-                        <input type="text" placeholder="Name" />
-                        <input type="email" placeholder="Email Address" />
+                    <?= view('message/message') ?>
+                    <form action="login" method="post">
+                        <input type="text" placeholder="Email Address"  name="email"/>
+                        <input type="password" placeholder="Password" name="password" />
                         <span>
                             <input type="checkbox" class="checkbox">
                             Keep me signed in

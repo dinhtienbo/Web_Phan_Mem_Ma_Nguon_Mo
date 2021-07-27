@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'user\HomeController::index');
 //Login
 $routes->get('login', 'user\LoginController::login');
+$routes->post('login', 'user\LoginController::checklogin');
 
 //404
 $routes->get('error/404', function () {
