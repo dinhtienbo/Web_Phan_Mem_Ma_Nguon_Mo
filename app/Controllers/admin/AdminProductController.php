@@ -337,6 +337,19 @@ class AdminProductController extends BaseController
     public function Delete($id)
     {
         $data = json_decode(json_encode($this->product->getById($id)), True);
+       
+        if( $data['image_link']!='')
+        {
+            unlink('upload/product/'.$data['image_link']);
+        }
+        if($data['image_list']!='')
+        {
+            $list= explode(',',$data['image_list']);
+            foreach($list as $row)
+                unlink('upload/product/'.$row);
+
+        }
+
         $this->product->Delete($id);
         return redirect("admin/List-Product");
     }

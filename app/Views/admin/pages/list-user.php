@@ -141,7 +141,7 @@
     <!-- Footer -->
     <div id="footer">
         <div class="wrapper">
-            <div>Bản quyền © 2012-2016 hocphp.info</div>
+            <div>Bản quyền thuộc yasuo</div>
         </div>
     </div>
 </div>
