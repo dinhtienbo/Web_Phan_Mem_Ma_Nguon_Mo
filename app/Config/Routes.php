@@ -49,9 +49,7 @@ $routes->group('cart', function ($routes) {
 //Product
 $routes->group('product', function ($routes) {
 	$routes->get('', 'user\ProductController::product');
-	$routes->group('product-detail', function ($routes) {
-		$routes->get('', 'user\ProductDetailController::productdetail');
-	});
+	$routes->get('product-detail/(:any)', 'user\ProductDetailController::productdetail/$1');
 });
 
 //Admin

@@ -3,7 +3,7 @@
         <!--product-details-->
         <div class="col-sm-5">
             <div class="view-product">
-                <img src="acsset/user/images/product-details/1.jpg" alt="" />
+                <img src="upload/product/<?= $product['image_link'] ?>" alt="" />
                 <h3>ZOOM</h3>
             </div>
             <div id="similar-product" class="carousel slide" data-ride="carousel">
@@ -11,19 +11,19 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <a href=""><img src="acsset/user/images/product-details/similar1.jpg" alt=""></a>
-                        <a href=""><img src="acsset/user/images/product-details/similar2.jpg" alt=""></a>
-                        <a href=""><img src="acsset/user/images/product-details/similar3.jpg" alt=""></a>
+                        <?php foreach($list as $row) :?>
+                        <a href=""><img src="upload/product/<?= $row?>" alt=""></a>
+                        <?php endforeach ?>
                     </div>
                     <div class="item">
-                        <a href=""><img src="acsset/user/images/product-details/similar1.jpg" alt=""></a>
-                        <a href=""><img src="acsset/user/images/product-details/similar2.jpg" alt=""></a>
-                        <a href=""><img src="acsset/user/images/product-details/similar3.jpg" alt=""></a>
+                    <?php foreach($list as $row) :?>
+                        <a href=""><img src="upload/product/<?= $row?>" alt=""></a>
+                        <?php endforeach ?>
                     </div>
                     <div class="item">
-                        <a href=""><img src="acsset/user/images/product-details/similar1.jpg" alt=""></a>
-                        <a href=""><img src="acsset/user/images/product-details/similar2.jpg" alt=""></a>
-                        <a href=""><img src="acsset/user/images/product-details/similar3.jpg" alt=""></a>
+                    <?php foreach($list as $row) :?>
+                        <a href=""><img src="upload/product/<?= $row?>" alt=""></a>
+                        <?php endforeach ?>
                     </div>
 
                 </div>
@@ -42,11 +42,20 @@
             <div class="product-information">
                 <!--/product-information-->
                 <img src="acsset/user/images/product-details/new.jpg" class="newarrival" alt="" />
-                <h2>Anne Klein Sleeveless Colorblock Scuba</h2>
-                <p>Web ID: 1089772</p>
+                <h2><?= $product['name'] ?></h2>
+
                 <img src="acsset/user/images/product-details/rating.png" alt="" />
                 <span>
-                    <span>US $59</span>
+                    <span> <?php if ($product['discount'] > 0) : ?>
+                            <?php $price_new = $product['price'] - $product['discount']; ?>
+                            <?php echo number_format($price_new) ?> VND</b>
+
+                        <?php else : ?>
+                            <?php echo number_format($product['price']) ?> đ</b>
+                        <?php endif; ?>
+                    </span>
+
+
                     <label>Quantity:</label>
                     <input type="text" value="3" />
                     <button type="button" class="btn btn-fefault cart">
@@ -54,9 +63,9 @@
                         Add to cart
                     </button>
                 </span>
-                <p><b>Availability:</b> In Stock</p>
-                <p><b>Condition:</b> New</p>
-                <p><b>Brand:</b> E-SHOPPER</p>
+                <p><b>Lượt xem:</b><?=$product['view']?></p>
+                <p><b>Lượt mua:</b> <?=$product['buyed']?></p>
+               
                 <a href=""><img src="acsset/user/images/product-details/share.png" class="share img-responsive" alt="" /></a>
             </div>
             <!--/product-information-->

@@ -98,7 +98,6 @@ class AdminProductController extends BaseController
             $file = $this->request->getFile('image');
             if ($file->isValid()) {
                 $newName = $file->getName();
-                $file->move('./upload/product', $newName);
                 $image_link = $newName;
             }
             //Multi
@@ -106,7 +105,6 @@ class AdminProductController extends BaseController
             $image_list = array();
             foreach ($fileMulti['image_list'] as $row) {
                 $newName = $row->getName();
-                $row->move('./upload/product', $newName);
                 $image_list[] = $newName;
             }
             //Nối chuỗi
@@ -123,7 +121,7 @@ class AdminProductController extends BaseController
                 'discount'   => $this->request->getPost('discount'),
                 'warranty'   => $this->request->getPost('warranty'),
                 'gifts'      => $this->request->getPost('gifts'),
-                'site_title' => $this->request->getPost('site_title'),
+                
                 'meta_desc'  => $this->request->getPost('meta_desc'),
                 'meta_key'   => $this->request->getPost('meta_key'),
                 'content'    => $this->request->getPost('content'),
@@ -151,6 +149,18 @@ class AdminProductController extends BaseController
         $dataSave = $requestData;
         try {
             $model1->$string($dataSave);
+            $file = $this->request->getFile('image');
+            if ($file->isValid()) {
+                $newName = $file->getName();
+                $file->move('./upload/product', $newName);
+            }
+            //Multi
+            $fileMulti = $this->request->getFiles();
+            foreach ($fileMulti['image_list'] as $row) {
+                $newName = $row->getName();
+                $row->move('./upload/product', $newName);
+            }
+
             return [
                 'status' => ResultUtils::STATUS_CODE_OK,
                 'messageCode' => ResultUtils::MESSAGE_CODE_OK,

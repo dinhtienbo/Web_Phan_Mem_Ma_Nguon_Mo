@@ -60,7 +60,7 @@ class BaseController extends Controller
 	/*
 		Set data for master layout
 	*/
-	public function loadUserLayout($data,$title,$content,$leftMenu,$slide)
+	public function loadUserLayout($data,$title,$content,$leftMenu,$slide, $dataLayout=[])
 	{
 		$data['title']=$title;
 		$data['css']=view('user/layout/css');
@@ -74,7 +74,7 @@ class BaseController extends Controller
 			$data['slide']=null;
 		else $data['slide']=view($slide);
 		
-		$data['content']=view($content);
+		$data['content']=view($content,$dataLayout);
 		$data['footer']=view('user/layout/footer');
 		$data['js']=view('user/layout/js');
 		return $data;

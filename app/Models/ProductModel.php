@@ -22,5 +22,11 @@ class ProductModel extends BaseModel
         return $sql;
     }
 
+    public function metaKey($metaKey)
+    {
+            $db = \Config\Database::connect();
+            return $this->db->table($this->table)->where('meta_key',$metaKey)->get()->getRow();
+    }
+
     
 }
