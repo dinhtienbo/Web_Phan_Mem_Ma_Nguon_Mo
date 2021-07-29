@@ -261,7 +261,7 @@
 
                 <div class="formSubmit">
                     <input type="submit" class="redB" value="Sửa">
-                    <input type="reset" class="basic" value="Hủy bỏ" >
+                    <input type="reset" class="basic" onclick="location.href='admin/List-Product';" value="Hủy bỏ" >
                 </div>
                 <div class="clear"></div>
             </div>

@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Models;
-use CodeIgniter\Model;
+use App\Models\BaseModel;
 
-class UserModel extends Model
+class UserModel extends BaseModel
 {
-	protected $table = 'user';
-	
+    var $table='user';
 }
+?>

@@ -106,10 +106,13 @@ $routes->group('admin', function ($routes) {
 	//Admin User
 	$routes->group('List-User', function ($routes) {
 		$routes->get('', 'admin\AdminUserController::index');
-		$routes->get('Add', 'admin\AdminUserController::addUser');
-		$routes->post('Create', 'admin\AdminUserController::createUser');
-		$routes->get('Edit/(:num)', 'admin\AdminUserController::editUser/$1');
+		$routes->post('Create', 'admin\AdminUserController::Create');
+		$routes->get('Add', 'admin\AdminUserController::AddUser');
+		$routes->get('Edit/(:num)', 'admin\AdminUserController::EditUser/$1');
+		$routes->post('EditUser/(:num)', 'admin\AdminUserController::Edit/$1');
+		$routes->get('Delete/(:num)', 'admin\AdminUserController::Delete/$1');
 	});
+
 });
 /*
  * --------------------------------------------------------------------

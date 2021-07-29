@@ -82,7 +82,7 @@
 
         <?= view('message/messageUser')?>
         <!-- Form -->
-        <form class="form" id="form" action="admin/List-User/Create" method="post">
+        <form class="form" id="form" action="admin/List-User/EditUser/<?= $user['id']  ?>" method="post">
             <fieldset>
                 <div class="widget">
                     <div class="title">
@@ -174,7 +174,7 @@
 
                         <div class="formSubmit">
                             <input type="submit" value="Thêm mới" class="redB" />
-                            <input type="reset" value="Hủy bỏ" class="basic" />
+                            <input type="reset" value="Hủy bỏ" onclick="location.href='admin/List-User';" class="basic" />
 
                         </div>
                         <div class="clear"></div>

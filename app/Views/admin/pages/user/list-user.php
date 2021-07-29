@@ -66,10 +66,10 @@
             <div class="title">
                 <span class="titleIcon"><input type="checkbox" id="titleCheck" name="titleCheck" /></span>
                 <h6>Danh sách Thành viên</h6>
-                <div class="num f12">Tổng số: <b>0</b></div>
+                <div class="num f12">Tổng số: <b><?= count($users) ?></b></div>
             </div>
 
-            <form action="http://localhost/webphp/index.php/admin/user.html" method="get" class="form" name="filter">
+            <form action="admin/List-User" method="get" class="form" name="filter">
                 <table cellpadding="0" cellspacing="0" width="100%" class="sTable mTable myTable withCheck" id="checkAll">
                     <thead>
                         <tr>
@@ -125,7 +125,7 @@
                                         <img src="acsset/admin/images/icons/color/edit.png" />
                                     </a>
 
-                                    <a href="user/del/19.html" title="Xóa" class="tipS verify_action">
+                                    <a href="admin/List-User/Delete/<?= $user['id'] ?>" onClick="return confirm('Bạn có muốn xóa?')" title="Xóa" class="tipS verify_action">
                                         <img src="acsset/admin/images/icons/color/delete.png" />
                                     </a>
                                 </td>
