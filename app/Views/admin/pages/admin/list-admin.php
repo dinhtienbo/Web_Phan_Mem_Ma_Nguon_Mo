@@ -75,7 +75,7 @@
                         <tr>
                             <td style="width:10px;"><img src="acsset/admin/images/icons/tableArrows.png" /></td>
                             <td style="width:80px;">Mã số</td>
-                            <td>Username</td>
+                            <td>email</td>
                             <td>Name</td>
 
                             <td style="width:100px;">Hành động</td>
@@ -105,8 +105,8 @@
                                 <td class="textC"><?= $admin['id'] ?></td>
 
 
-                                <td><span title="<?= $admin['username'] ?>" class="tipS">
-                                        <?= $admin['username'] ?> </span></td>
+                                <td><span title="<?= $admin['email'] ?>" class="tipS">
+                                        <?= $admin['email'] ?> </span></td>
 
 
                                 <td><span title="<?= $admin['name'] ?>" class="tipS">

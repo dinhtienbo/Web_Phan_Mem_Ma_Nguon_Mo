@@ -38,6 +38,11 @@ class AdminProductController extends BaseController
         }
         $dataLayout['catalogs'] = $catalogs;
 
+        //Menu
+        $catalogs=json_decode(json_encode($catalogs), True);
+        $session = session();
+        $session ->set('left-Menu',$catalogs);
+
         //Phân trang
         // $data = [
         //     'product' => $this->product->paginate(5),

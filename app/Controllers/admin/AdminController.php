@@ -22,7 +22,7 @@ class AdminController extends BaseController
     {
         $data = [];
         $dataLayout['admins'] = json_decode(json_encode($this->admins->getList()), True); //Chuyển object thành mảng
-        $data = $this->loadMastLayout($data, "Trang quản lý admin", "admin/pages/list-admin", $dataLayout, [], []);
+        $data = $this->loadMastLayout($data, "Trang quản lý admin", "admin/pages/admin/list-admin", $dataLayout, [], []);
         return view('admin/main', $data);
     }
 
@@ -30,7 +30,7 @@ class AdminController extends BaseController
     {
         $data = [];
         $dataLayout = [];
-        $data = $this->loadMastLayout($data, "Thêm admin", "admin/pages/add-admin", $dataLayout, [], []);
+        $data = $this->loadMastLayout($data, "Thêm admin", "admin/pages/admin/add-admin", $dataLayout, [], []);
         return view('admin/main', $data);
     }
 
@@ -57,7 +57,7 @@ class AdminController extends BaseController
         }
         $dataSave=$requestData->getPost();
         unset($dataSave['password_confirm']);
-        $dataSave['password']=password_hash($dataSave['password'],PASSWORD_BCRYPT);
+        $dataSave['password']=md5($dataSave['password']);
         try{
             $model1->$string($dataSave);
             return[
@@ -87,7 +87,7 @@ class AdminController extends BaseController
         }
         $dataSave=$requestData->getPost();
         unset($dataSave['password_confirm']);
-        $dataSave['password']=password_hash($dataSave['password'],PASSWORD_BCRYPT);
+        $dataSave['password']=md5($dataSave['password']);
         try{
             $model1->$string($id,$dataSave);
             return[
@@ -108,15 +108,16 @@ class AdminController extends BaseController
     private function Check($requestData)
     {
         $rule = [
-            'username' => 'is_unique[admin.username]|max_length[100]',
+            'email' => 'is_unique[admin.email]|max_length[100]|valid_email|is_unique[user.email]',
             'name' => 'max_length[100]',
             'password' => 'max_length[30]|min_length[6]',
             'password_confirm' => 'matches[password]'
         ];
         $message = [
-            'username' => [
+            'email' => [
+                'valid_email'=>'Không giống định dạng email!',
                 'max_length' => 'Tên quá dài, vui lòng nhập {param} ký tự!',
-                'is_unique' => 'User đã được đăng ký vui lòng nhập email khác!'
+                'is_unique' => 'Email này đã được đăng ký vui lòng nhập email khác!'
             ],
 
             'name' => [
@@ -142,15 +143,15 @@ class AdminController extends BaseController
     private function CheckEdit($requestData)
     {
         $rule = [
-            'username' => 'max_length[100]',
+            'email' => 'max_length[100]|valid_email',
             'name' => 'max_length[100]',
             'password' => 'max_length[30]|min_length[6]',
             'password_confirm' => 'matches[password]'
         ];
         $message = [
-            'username' => [
+            'email' => [
                 'max_length' => 'Tên quá dài, vui lòng nhập {param} ký tự!',
-                
+                'valid_email'=>'Không giống định dạng email!',
             ],
 
             'name' => [
@@ -180,7 +181,7 @@ class AdminController extends BaseController
         $dataLayout['admins'] = json_decode(json_encode($this->admins->getById($id)), True); //Chuyển object thành mảng
         if(count( $dataLayout['admins'])==0)
             return redirect('error/404');
-        $data = $this->loadMastLayout($data, "Sửa thông tin admin", "admin/pages/edit-admin", $dataLayout, [], []);
+        $data = $this->loadMastLayout($data, "Sửa thông tin admin", "admin/pages/admin/edit-admin", $dataLayout, [], []);
         return view('admin/main', $data);
     }
 

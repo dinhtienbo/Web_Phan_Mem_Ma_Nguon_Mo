@@ -3,6 +3,8 @@
 namespace App\Controllers\admin;
 use App\Controllers\BaseController;
 use App\Service\user\UserService;
+use App\Models\AdminModel;
+
 
 class AdminUserController extends BaseController
 {

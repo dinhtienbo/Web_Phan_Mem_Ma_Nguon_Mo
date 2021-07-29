@@ -99,7 +99,7 @@
                             <div class="formRow">
                                 <label class="formLeft" for="param_name">Tài khoản:<span class="req">*</span></label>
                                 <div class="formRight">
-                                    <span class="oneTwo"><input value="<?= old('username') ?>" name="username" id="param_password" _autocheck="true" type="text" /></span>
+                                    <span class="oneTwo"><input value="<?= old('email') ?>" name="email" id="param_password" _autocheck="true" type="text" /></span>
                                     <span name="name_autocheck" class="autocheck"></span>
                                     <div name="name_error" class="clear error"></div>
                                 </div>
