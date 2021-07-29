@@ -53,7 +53,7 @@ $routes->group('product', function ($routes) {
 });
 
 //Admin
-$routes->group('admin', function ($routes) {
+$routes->group('admin',['filter'=>'adminFilter'], function ($routes) {
 	$routes->get('', 'admin\AdminHomeController::index');
 
 	//Admin 

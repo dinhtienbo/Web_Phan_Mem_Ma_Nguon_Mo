@@ -101,7 +101,7 @@ class LoginController extends BaseController
             else{
                 $session = session();
                 unset($dataAdmin['password']);
-                $session ->set('login',$dataUser);
+                $session ->set('loginAdmin',$dataAdmin);
 
                 return[
                     'status'=>null,
