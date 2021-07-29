@@ -83,3 +83,46 @@ CRITICAL - 2021-07-29 12:59:18 --> Undefined array key "users"
 #4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
 #5 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
 #6 {main}
+CRITICAL - 2021-07-29 13:24:30 --> Call to undefined method App\Models\UserModel::getRow
+#0 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\user\LoginController.php(58): CodeIgniter\Model->__call('getRow', Array)
+#1 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\user\LoginController.php(41): App\Controllers\user\LoginController->checkUser(Object(CodeIgniter\HTTP\IncomingRequest))
+#2 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\user\LoginController->checklogin()
+#3 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\LoginController))
+#4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#6 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
+#7 {main}
+CRITICAL - 2021-07-29 13:29:40 -->  is not a valid rule.
+#0 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Validation\Validation.php(321): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+#1 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Validation\Validation.php(159): CodeIgniter\Validation\Validation->processRules('email', 'email', '\xC3\xA1dsa', Array, Array)
+#2 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\user\LoginController.php(118): CodeIgniter\Validation\Validation->run()
+#3 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\user\LoginController.php(57): App\Controllers\user\LoginController->Check(Object(CodeIgniter\HTTP\IncomingRequest))
+#4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\user\LoginController.php(41): App\Controllers\user\LoginController->checkUser(Object(CodeIgniter\HTTP\IncomingRequest))
+#5 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\user\LoginController->checklogin()
+#6 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\LoginController))
+#7 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#9 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
+#10 {main}
+CRITICAL - 2021-07-29 13:31:07 -->  is not a valid rule.
+#0 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Validation\Validation.php(321): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+#1 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Validation\Validation.php(159): CodeIgniter\Validation\Validation->processRules('email', 'email', '\xC3\xA1dsa', Array, Array)
+#2 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\user\LoginController.php(118): CodeIgniter\Validation\Validation->run()
+#3 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\user\LoginController.php(57): App\Controllers\user\LoginController->Check(Object(CodeIgniter\HTTP\IncomingRequest))
+#4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\user\LoginController.php(41): App\Controllers\user\LoginController->checkUser(Object(CodeIgniter\HTTP\IncomingRequest))
+#5 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\user\LoginController->checklogin()
+#6 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\LoginController))
+#7 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#9 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
+#10 {main}
+CRITICAL - 2021-07-29 13:46:54 -->  route cannot be found while reverse-routing.
+#0 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(64): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(972): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\user\LoginController.php(47): redirect('/admin')
+#3 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\user\LoginController->checklogin()
+#4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\LoginController))
+#5 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#7 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
+#8 {main}
