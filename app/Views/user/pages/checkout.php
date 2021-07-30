@@ -9,89 +9,37 @@
         <!--/breadcrums-->
 
         <div class="step-one">
-            <h2 class="heading">Step1</h2>
+            <h2 class="heading">Bước 1</h2>
         </div>
         <div class="checkout-options">
-            <h3>New User</h3>
-            <p>Checkout options</p>
-            <ul class="nav">
-                <li>
-                    <label><input type="checkbox"> Register Account</label>
-                </li>
-                <li>
-                    <label><input type="checkbox"> Guest Checkout</label>
-                </li>
-                <li>
-                    <a href=""><i class="fa fa-times"></i>Cancel</a>
-                </li>
-            </ul>
+            <h3>Nhập thông tin</h3>
+           
         </div>
         <!--/checkout-options-->
 
-        <div class="register-req">
-            <p>Please use Register And Checkout to easily get access to your order history, or use Checkout as Guest</p>
-        </div>
+        
         <!--/register-req-->
-
-        <div class="shopper-informations">
+        <?php if (session()->get('login')) : ?>
+            
+        <?php else : ?>
+            <div class="shopper-informations">
             <div class="row">
-                <div class="col-sm-3">
-                    <div class="shopper-info">
-                        <p>Shopper Information</p>
-                        <form>
-                            <input type="text" placeholder="Display Name">
-                            <input type="text" placeholder="User Name">
-                            <input type="password" placeholder="Password">
-                            <input type="password" placeholder="Confirm password">
-                        </form>
-                        <a class="btn btn-primary" href="">Get Quotes</a>
-                        <a class="btn btn-primary" href="">Continue</a>
-                    </div>
-                </div>
-                <div class="col-sm-5 clearfix">
+
+                <div class="col-sm-8 clearfix">
                     <div class="bill-to">
-                        <p>Bill To</p>
+                        <p>Thông tin</p>
                         <div class="form-one">
                             <form>
-                                <input type="text" placeholder="Company Name">
-                                <input type="text" placeholder="Email*">
-                                <input type="text" placeholder="Title">
-                                <input type="text" placeholder="First Name *">
-                                <input type="text" placeholder="Middle Name">
-                                <input type="text" placeholder="Last Name *">
-                                <input type="text" placeholder="Address 1 *">
-                                <input type="text" placeholder="Address 2">
+                                <input type="text" placeholder="Tên khách hàng">
+
+                                <input type="text" placeholder="Điện thoại *">
                             </form>
                         </div>
                         <div class="form-two">
                             <form>
-                                <input type="text" placeholder="Zip / Postal Code *">
-                                <select>
-                                    <option>-- Country --</option>
-                                    <option>United States</option>
-                                    <option>Bangladesh</option>
-                                    <option>UK</option>
-                                    <option>India</option>
-                                    <option>Pakistan</option>
-                                    <option>Ucrane</option>
-                                    <option>Canada</option>
-                                    <option>Dubai</option>
-                                </select>
-                                <select>
-                                    <option>-- State / Province / Region --</option>
-                                    <option>United States</option>
-                                    <option>Bangladesh</option>
-                                    <option>UK</option>
-                                    <option>India</option>
-                                    <option>Pakistan</option>
-                                    <option>Ucrane</option>
-                                    <option>Canada</option>
-                                    <option>Dubai</option>
-                                </select>
-                                <input type="password" placeholder="Confirm password">
-                                <input type="text" placeholder="Phone *">
-                                <input type="text" placeholder="Mobile Phone">
-                                <input type="text" placeholder="Fax">
+                                <input type="text" placeholder="Email*">
+                                <input type="text" placeholder="Địa chỉ">
+
                             </form>
                         </div>
                     </div>
@@ -105,118 +53,71 @@
                 </div>
             </div>
         </div>
+        <?php endif; ?>
+        
         <div class="review-payment">
-            <h2>Review & Payment</h2>
+            <h2>Bước 2: Xem lại và thanh toán</h2>
         </div>
 
         <div class="table-responsive cart_info">
             <table class="table table-condensed">
                 <thead>
                     <tr class="cart_menu">
-                        <td class="image">Item</td>
-                        <td class="description"></td>
-                        <td class="price">Price</td>
-                        <td class="quantity">Quantity</td>
-                        <td class="total">Total</td>
+                        <td class="image">Ảnh sản phẩm</td>
+                        <td class="description">Tên sản phẩm</td>
+                        <td class="price">Giá</td>
+                        <td class="quantity">Số lượng</td>
+                        <td class="total">Tổng tiền</td>
                         <td></td>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="cart_product">
-                            <a href=""><img src="acsset/user/images/cart/one.png" alt=""></a>
-                        </td>
-                        <td class="cart_description">
-                            <h4><a href="">Colorblock Scuba</a></h4>
-                            <p>Web ID: 1089772</p>
-                        </td>
-                        <td class="cart_price">
-                            <p>$59</p>
-                        </td>
-                        <td class="cart_quantity">
-                            <div class="cart_quantity_button">
-                                <a class="cart_quantity_up" href=""> + </a>
-                                <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-                                <a class="cart_quantity_down" href=""> - </a>
-                            </div>
-                        </td>
-                        <td class="cart_total">
-                            <p class="cart_total_price">$59</p>
-                        </td>
-                        <td class="cart_delete">
-                            <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
-                        </td>
-                    </tr>
+                    <?php foreach ($items as $row) : ?>
+                        <tr>
+                            <td class="cart_product">
+                                <a href=""><img style="height: 110px; width: 110px;" src="upload/product/<?= $row['image'] ?>" alt=""></a>
+                            </td>
+                            <td class="cart_description">
+                                <h4><a href=""><?= $row['name'] ?></a></h4>
 
-                    <tr>
-                        <td class="cart_product">
-                            <a href=""><img src="acsset/user/images/cart/two.png" alt=""></a>
-                        </td>
-                        <td class="cart_description">
-                            <h4><a href="">Colorblock Scuba</a></h4>
-                            <p>Web ID: 1089772</p>
-                        </td>
-                        <td class="cart_price">
-                            <p>$59</p>
-                        </td>
-                        <td class="cart_quantity">
-                            <div class="cart_quantity_button">
-                                <a class="cart_quantity_up" href=""> + </a>
-                                <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-                                <a class="cart_quantity_down" href=""> - </a>
-                            </div>
-                        </td>
-                        <td class="cart_total">
-                            <p class="cart_total_price">$59</p>
-                        </td>
-                        <td class="cart_delete">
-                            <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="cart_product">
-                            <a href=""><img src="acsset/user/images/cart/three.png" alt=""></a>
-                        </td>
-                        <td class="cart_description">
-                            <h4><a href="">Colorblock Scuba</a></h4>
-                            <p>Web ID: 1089772</p>
-                        </td>
-                        <td class="cart_price">
-                            <p>$59</p>
-                        </td>
-                        <td class="cart_quantity">
-                            <div class="cart_quantity_button">
-                                <a class="cart_quantity_up" href=""> + </a>
-                                <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-                                <a class="cart_quantity_down" href=""> - </a>
-                            </div>
-                        </td>
-                        <td class="cart_total">
-                            <p class="cart_total_price">$59</p>
-                        </td>
-                        <td class="cart_delete">
-                            <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
-                        </td>
-                    </tr>
+                            </td>
+                            <td class="cart_price">
+                                <p>$<?= $row['price'] ?></p>
+                            </td>
+                            <td class="cart_quantity">
+                                <div class="cart_quantity_button">
+                                    <a class="cart_quantity_up" href="cart/add/<?= $row['id'] ?>"> + </a>
+                                    <input class="cart_quantity_input" type="text" name="quantity[]" value="<?= $row['qty'] ?>" autocomplete="off" size="2">
+                                    <a class="cart_quantity_down" href="cart/minus"> - </a>
+                                </div>
+                            </td>
+                            <td class="cart_total">
+                                <p class="cart_total_price">$<?= ($row['price'] * $row['qty']) ?></p>
+                            </td>
+                            <td class="cart_delete">
+                                <a class="cart_quantity_delete" href="cart/remove/<?= ($row['id']) ?>"><i class="fa fa-times"></i></a>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
                     <tr>
                         <td colspan="4">&nbsp;</td>
                         <td colspan="2">
                             <table class="table table-condensed total-result">
                                 <tr>
-                                    <td>Cart Sub Total</td>
-                                    <td>$59</td>
+                                    <td>Tổng tiền sản phẩm</td>
+                                    <td>$ <?= $total ?></td>
                                 </tr>
                                 <tr>
-                                    <td>Exo Tax</td>
-                                    <td>$2</td>
+                                    <td>Thuế</td>
+                                    <td>0 USD</td>
                                 </tr>
                                 <tr class="shipping-cost">
-                                    <td>Shipping Cost</td>
-                                    <td>Free</td>
+                                    <td>Tiền vận chuyển</td>
+                                    <td>Miễn phí</td>
                                 </tr>
                                 <tr>
-                                    <td>Total</td>
-                                    <td><span>$61</span></td>
+                                    <td>Tổng tiền</td>
+                                    <td><span>$<?= $total ?></span></td>
                                 </tr>
                             </table>
                         </td>

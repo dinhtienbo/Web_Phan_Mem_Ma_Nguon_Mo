@@ -36,7 +36,7 @@
                                     <div class="cart_quantity_button">
                                         <a class="cart_quantity_up" href="cart/add/<?= $row['id'] ?>"> + </a>
                                         <input class="cart_quantity_input" type="text" name="quantity[]" value="<?= $row['qty'] ?>" autocomplete="off" size="2">
-                                        <a class="cart_quantity_down" href=""> - </a>
+                                        <a class="cart_quantity_down" href="cart/minus"> - </a>
                                     </div>
                                 </td>
                                 <td class="cart_total">
@@ -52,7 +52,7 @@
             </div>
             <div style="position: absolute; right: 12px; margin-top: -40px;">
                 <button type="submit" class="btn btn-warning"> Cập nhật</button>
-                <button class="btn btn-warning">Checkout</button>
+                <button class="btn btn-warning" ><a href = "cart/checkout"  style="color:white;">Checkout</a></button>
             </div>
         </form>
     </div>

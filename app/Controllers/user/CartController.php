@@ -62,6 +62,23 @@ class CartController extends BaseController
 		return redirect()->back();
 	}
 
+	public function minus()
+	{
+		$cart = array_values(session('cart'));
+		for($i=0; $i <count($cart);$i++)
+		{
+			$cart[$i]['qty']--;
+			if($cart[$i]['qty']==0){
+				unset($cart[$i]);
+				break;
+			}
+		}
+		$session= session();
+		$session->set('cart',$cart);
+		return redirect()->back();
+	
+	}
+
 
 	public function remove($id)
 	{
