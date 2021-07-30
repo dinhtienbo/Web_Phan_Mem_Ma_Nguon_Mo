@@ -9,6 +9,7 @@ use App\Common\ResultUtils;
 use Exception;
 use CodeIgniter\I18n\Time;
 use DateTime;
+use SebastianBergmann\Type\UnknownType;
 
 class AdminProductController extends BaseController
 {
@@ -37,11 +38,11 @@ class AdminProductController extends BaseController
             $row->subs = $subs;
         }
         $dataLayout['catalogs'] = $catalogs;
-        
+
         //Menu
-        $catalogs=json_decode(json_encode($catalogs), True);
+        $catalogs = json_decode(json_encode($catalogs), True);
         $session = session();
-        $session ->set('left-Menu',$catalogs);
+        $session->set('left-Menu', $catalogs);
 
         //Phân trang
         // $data = [
@@ -113,10 +114,10 @@ class AdminProductController extends BaseController
                 $image_list[] = $newName;
             }
             //Nối chuỗi
-            $str = implode (",", $image_list);
-            $time = new Time('now','Asia/Ho_Chi_Minh');
+            $str = implode(",", $image_list);
+            $time = new Time('now', 'Asia/Ho_Chi_Minh');
             $time = $time->format('Y-m-d H:i:s');
-           
+
             $requestData = [
                 'name'       => $this->request->getPost('name'),
                 'catalog_id' => $this->request->getPost('catalog_id'),
@@ -126,7 +127,7 @@ class AdminProductController extends BaseController
                 'discount'   => $this->request->getPost('discount'),
                 'warranty'   => $this->request->getPost('warranty'),
                 'gifts'      => $this->request->getPost('gifts'),
-                
+
                 'meta_desc'  => $this->request->getPost('meta_desc'),
                 'meta_key'   => $this->request->getPost('meta_key'),
                 'content'    => $this->request->getPost('content'),
@@ -135,14 +136,14 @@ class AdminProductController extends BaseController
             ];
 
             $result = $this->ActionCreate($requestData, $this->product, 'create');
-            return redirect()->back()->withInput()->with($result['messageCode'],$result['messages']);
+            return redirect()->back()->withInput()->with($result['messageCode'], $result['messages']);
         }
     }
 
     //Hàm thêm
     public function ActionCreate($requestData, $model1, $string)
     {
-        $requestData1=$this->request;
+        $requestData1 = $this->request;
         $validate = $this->Check($requestData1);
         if ($validate->getErrors()) {
             return [
@@ -183,7 +184,7 @@ class AdminProductController extends BaseController
     //Hàm sửa
     public function ActionEdit($requestData, $model1, $string, $id)
     {
-        $requestData1=$this->request;
+        $requestData1 = $this->request;
         $validate = $this->CheckEdit($requestData1);
         if ($validate->getErrors()) {
             return [
@@ -195,6 +196,17 @@ class AdminProductController extends BaseController
         $dataSave = $requestData;
         try {
             $model1->$string($id, $dataSave);
+            $file = $this->request->getFile('image');
+            if ($file->isValid()) {
+                $newName = $file->getName();
+                $file->move('./upload/product', $newName);
+            }
+            //Multi
+            $fileMulti = $this->request->getFiles();
+            foreach ($fileMulti['image_list'] as $row) {
+                $newName = $row->getName();
+                $row->move('./upload/product', $newName);
+            }
             return [
                 'status' => ResultUtils::STATUS_CODE_OK,
                 'messageCode' => ResultUtils::MESSAGE_CODE_OK,
@@ -216,7 +228,7 @@ class AdminProductController extends BaseController
             'name' => 'max_length[100]',
 
             'price' => 'numeric',
-            
+
         ];
         $message = [
             'name' => [
@@ -227,7 +239,7 @@ class AdminProductController extends BaseController
                 'numeric' => 'Giá phải là số ',
             ],
 
-           
+
 
         ];
 
@@ -281,7 +293,7 @@ class AdminProductController extends BaseController
             $subs = $this->category->getListCategoryCha($row->id);
             $row->subs = $subs;
         }
-        $dataLayout['catalogs']=$catalogs;
+        $dataLayout['catalogs'] = $catalogs;
         if (!isset($dataLayout['product']))
             return redirect('error/404');
         $data = $this->loadMastLayout($data, "Sửa thông tin danh mục", "admin/pages/product/edit-product", $dataLayout, [], []);
@@ -291,47 +303,41 @@ class AdminProductController extends BaseController
     public function Edit($id)
     {
         //Ảnh
-            //Avatar
-            $image_link = '';
-            $file = $this->request->getFile('image');
-            if ($file->isValid()) {
-                $newName = $file->getName();
-                $file->move('./upload/product', $newName);
-                $image_link = $newName;
-            }
-            //Multi
-            $fileMulti = $this->request->getFiles();
-            $image_list = array();
-            if(($fileMulti['image_list'])==null)
-            {
-                foreach ($fileMulti['image_list'] as $row) {
-                    $newName = $row->getName();
-                    $row->move('./upload/product', $newName);
-                    $image_list[] = $newName;
-                }
-            }
-            else $image_link="";
-            //Nối chuỗi
-            $str = implode (",", $image_list);
-            $time = new Time('now','Asia/Ho_Chi_Minh');
-            $time = $time->format('Y-m-d H:i:s');
-           
-            $requestData = [
-                'name'       => $this->request->getPost('name'),
-                'catalog_id' => $this->request->getPost('catalog_id'),
-                'price'      => $this->request->getPost('price'),
-                'image_link' => (string)$image_link,
-                'image_list' => $str,
-                'discount'   => $this->request->getPost('discount'),
-                'warranty'   => $this->request->getPost('warranty'),
-                'gifts'      => $this->request->getPost('gifts'),
-                'site_title' => $this->request->getPost('site_title'),
-                'meta_desc'  => $this->request->getPost('meta_desc'),
-                'meta_key'   => $this->request->getPost('meta_key'),
-                'content'    => $this->request->getPost('content'),
-                'created' => $time
+        //Avatar
+        $image_link = '';
+        $file = $this->request->getFile('image');
+        if ($file->isValid()) {
+            $newName = $file->getName();
+            $image_link = $newName;
+        }
+        //Multi
+        $fileMulti = $this->request->getFiles();
+        $image_list = array();
 
-            ];
+        foreach ($fileMulti['image_list'] as $row) {
+            $newName = $row->getName();
+            $image_list[] = $newName;
+        }
+        //Nối chuỗi
+        $str = implode(",", $image_list);
+        $time = new Time('now', 'Asia/Ho_Chi_Minh');
+        $time = $time->format('Y-m-d H:i:s');
+
+        $requestData = [
+            'name'       => $this->request->getPost('name'),
+            'catalog_id' => $this->request->getPost('catalog_id'),
+            'price'      => $this->request->getPost('price'),
+            'image_link' => (string)$image_link,
+            'image_list' => $str,
+            'discount'   => $this->request->getPost('discount'),
+            'warranty'   => $this->request->getPost('warranty'),
+            'gifts'      => $this->request->getPost('gifts'),
+            'meta_key'   => $this->request->getPost('meta_key'),
+            'content'    => $this->request->getPost('content'),
+            'created' => $time
+
+        ];
+
         if ($this->request->getMethod() == 'post') {
             $result = $this->ActionEdit($requestData, $this->product, 'edit', $id);
 
@@ -342,17 +348,14 @@ class AdminProductController extends BaseController
     public function Delete($id)
     {
         $data = json_decode(json_encode($this->product->getById($id)), True);
-       
-        if( $data['image_link']!='')
-        {
-            unlink('upload/product/'.$data['image_link']);
-        }
-        if($data['image_list']!='')
-        {
-            $list= explode(',',$data['image_list']);
-            foreach($list as $row)
-                unlink('upload/product/'.$row);
 
+        if ($data['image_link'] != '') {
+            unlink('upload/product/' . $data['image_link']);
+        }
+        if ($data['image_list'] != '') {
+            $list = explode(',', $data['image_list']);
+            foreach ($list as $row)
+                unlink('upload/product/' . $row);
         }
 
         $this->product->Delete($id);

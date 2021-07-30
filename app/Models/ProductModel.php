@@ -28,5 +28,21 @@ class ProductModel extends BaseModel
             return $this->db->table($this->table)->where('meta_key',$metaKey)->get()->getRow();
     }
 
-    
+    public function getNewProduct()
+    {
+        $db = \Config\Database::connect();
+        return $this->db->table($this->table)->orderBy('created','DESC')->get(6)->getResult();
+    }
+
+    public function getTopBuyProduct()
+    {
+        $db = \Config\Database::connect();
+        return $this->db->table($this->table)->orderBy('buyed','DESC')->get(4)->getResult();
+    }
+
+    public function getTopViewProduct()
+    {
+        $db = \Config\Database::connect();
+        return $this->db->table($this->table)->orderBy('view','DESC')->get(4)->getResult();
+    }
 }

@@ -10,13 +10,13 @@
 
             <div class="userNav">
                 <ul>
-                    <li><a href="http://localhost/webphp/" target="_blank">
+                    <li><a href="" target="_blank">
                             <img style="margin-top:7px;" src="images/icons/light/home.png" />
                             <span>Trang chủ</span>
                         </a></li>
 
                     <!-- Logout -->
-                    <li><a href="home/logout.html">
+                    <li><a href="logout">
                             <img src="images/icons/topnav/logout.png" alt="" />
                             <span>Đăng xuất</span>
                         </a></li>

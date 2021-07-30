@@ -36,12 +36,16 @@ $routes->group('/',['filter'=>'userFilter'], function ($routes) {
 
 	//Login
 	$routes->get('login', 'user\LoginController::login');
+	$routes->get('logout', 'user\LoginController::logout');
 	$routes->post('login', 'user\LoginController::checklogin');
 
 	//Cart-Checkout
 	$routes->group('cart', function ($routes) {
 	$routes->get('', 'user\CartController::cart');
 	$routes->get('checkout', 'user\CheckoutController::checkout');
+	$routes->get('add/(:num)', 'user\CartController::add/$1');
+	$routes->get('remove/(:num)', 'user\CartController::remove/$1');
+	$routes->post('upload', 'user\CartController::upload');
 	});
 
 	//Product

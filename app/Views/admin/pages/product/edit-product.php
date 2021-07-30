@@ -86,8 +86,6 @@
 
                 <ul class="tabs">
                     <li class="activeTab"><a href="#tab1">Thông tin chung</a></li>
-                    <li class=""><a href="#tab2">SEO Onpage</a></li>
-                    <li class=""><a href="#tab3">Bài viết</a></li>
 
                 </ul>
 
@@ -107,7 +105,7 @@
                             <label class="formLeft">Hình ảnh:<span class="req">*</span></label>
                             <div class="formRight">
                                 <div class="left">
-                                    <input type="file" name="image" id="image" size="25" value="<?=$product->image_link ?>">
+                                    <input type="file" name="image" id="image" size="25" >
                                 </div>
                                 <div class="clear error" name="image_error"></div>
                             </div>
@@ -118,7 +116,7 @@
                             <label class="formLeft">Ảnh kèm theo:</label>
                             <div class="formRight">
                                 <div class="left">
-                                    <input type="file" multiple name="image_list[]" id="image_list" size="25" value="<?=$product->image_list ?>">
+                                    <input type="file" multiple name="image_list[]" id="image_list" size="25" >
                                 </div>
                                 <div class="clear error" name="image_list_error"></div>
                             </div>
@@ -210,32 +208,13 @@
                         <div class="formRow hide"></div>
                     </div>
 
-                    <div class="tab_content pd0" id="tab2" style="display: none;">
+                    <div class="tab_content pd0" id="tab2" >
+
 
                         <div class="formRow">
-                            <label for="param_site_title" class="formLeft">Title:</label>
+                            <label for="param_meta_key" class="formLeft">Từ khóa tìm kiếm:</label>
                             <div class="formRight">
-                                <span class="oneTwo"><textarea cols="" rows="4" _autocheck="true" id="param_site_title" name="site_title"></textarea></span>
-                                <span class="autocheck" name="site_title_autocheck"></span>
-                                <div class="clear error" name="site_title_error"></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="formRow">
-                            <label for="param_meta_desc" class="formLeft">Meta description:</label>
-                            <div class="formRight">
-                                <span class="oneTwo"><textarea cols="" rows="4" _autocheck="true" id="param_meta_desc" name="meta_desc"></textarea></span>
-                                <span class="autocheck" name="meta_desc_autocheck"></span>
-                                <div class="clear error" name="meta_desc_error"></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="formRow">
-                            <label for="param_meta_key" class="formLeft">Meta keywords:</label>
-                            <div class="formRight">
-                                <span class="oneTwo"><textarea cols="" rows="4" _autocheck="true" id="param_meta_key" name="meta_key"></textarea></span>
+                                <span class="oneTwo"><textarea cols="" rows="4" _autocheck="true" id="param_meta_key" name="meta_key"><?=$product->meta_key?></textarea></span>
                                 <span class="autocheck" name="meta_key_autocheck"></span>
                                 <div class="clear error" name="meta_key_error"></div>
                             </div>
@@ -244,11 +223,11 @@
                         <div class="formRow hide"></div>
                     </div>
 
-                    <div class="tab_content pd0" id="tab3" style="display: none;">
+                    <div class="tab_content pd0" id="tab3" style=>
                         <div class="formRow">
                             <label class="formLeft">Nội dung:</label>
                             <div class="formRight">
-                                <textarea class="editor" id="param_content" name="content"></textarea>
+                                <textarea class="editor" id="param_content" name="content"><?=$product->content?></textarea>
                                 <div class="clear error" name="content_error"></div>
                             </div>
                             <div class="clear"></div>

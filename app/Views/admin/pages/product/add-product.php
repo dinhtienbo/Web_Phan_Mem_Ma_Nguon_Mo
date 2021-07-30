@@ -16,7 +16,7 @@
                         </a></li>
 
                     <!-- Logout -->
-                    <li><a href="home/logout.html">
+                    <li><a href="logout">
                             <img src="acsset/admin/images/icons/topnav/logout.png" alt="" />
                             <span>Đăng xuất</span>
                         </a></li>

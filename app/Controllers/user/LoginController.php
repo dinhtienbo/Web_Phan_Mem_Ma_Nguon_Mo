@@ -27,7 +27,15 @@ class LoginController extends BaseController
 
 	public function login()
 	{
-		
+		$session =session();
+        if($session->has('loginAdmin')){
+            return redirect('admin');
+        }
+        $session =session();
+        if($session->has('login')){
+            return redirect('');
+        }
+
         $data=null;
         $data = $this ->loadUserLayout($data,"Đăng nhập - Đăng ký","user/pages/login","","");
 		return view('user\main',$data);
@@ -177,4 +185,10 @@ class LoginController extends BaseController
     }
 
 	
+    public function logout()
+    {
+        $session = session();
+        $session->destroy();
+        return redirect('login');
+    }
 }
