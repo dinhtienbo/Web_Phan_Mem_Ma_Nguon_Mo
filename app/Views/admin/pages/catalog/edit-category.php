@@ -5,7 +5,7 @@
     <div class="topNav">
         <div class="wrapper">
             <div class="welcome">
-                <span>Xin chào: <b>admin!</b></span>
+                <span>Xin chào: <b><?= session()->get('loginAdmin')['name']?></b></span>
             </div>
 
             <div class="userNav">

@@ -31,26 +31,26 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'user\HomeController::index');
-//Login
-$routes->get('login', 'user\LoginController::login');
-$routes->post('login', 'user\LoginController::checklogin');
+$routes->group('/',['filter'=>'userFilter'], function ($routes) {
+	$routes->get('', 'user\HomeController::index');
 
-//404
-$routes->get('error/404', function () {
-	return view('user/404');
-});
-//Cart-Checkout
-$routes->group('cart', function ($routes) {
+	//Login
+	$routes->get('login', 'user\LoginController::login');
+	$routes->post('login', 'user\LoginController::checklogin');
+
+	//Cart-Checkout
+	$routes->group('cart', function ($routes) {
 	$routes->get('', 'user\CartController::cart');
 	$routes->get('checkout', 'user\CheckoutController::checkout');
-});
+	});
 
-//Product
-$routes->group('product', function ($routes) {
+	//Product
+	$routes->group('product', function ($routes) {
 	$routes->get('', 'user\ProductController::product');
 	$routes->get('product-detail/(:any)', 'user\ProductDetailController::productdetail/$1');
+	});
 });
+
 
 //Admin
 $routes->group('admin',['filter'=>'adminFilter'], function ($routes) {

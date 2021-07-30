@@ -15,9 +15,9 @@ class ProductModel extends BaseModel
         if($id>0 && $id!='')
             $sql1= $this->db->table($this->table)->where('id',$id)->get()->getResult();
         if($name!='')
-            $sql2= $this->db->table($this->table)->where('name',$name)->get()->getResult();
+            $sql2= $this->db->table($this->table)->like('name',$name)->get()->getResult();
         if($catalog_id!=''&& $catalog_id>0)
-            $sql3= $this->db->table($this->table)->where('catalog_id',$catalog_id)->get()->getResult();
+            $sql3= $this->db->table($this->table)->like('catalog_id',$catalog_id)->get()->getResult();
         $sql = array_merge($sql1,$sql2,$sql3);//Gộp 2 lệnh sql
         return $sql;
     }
