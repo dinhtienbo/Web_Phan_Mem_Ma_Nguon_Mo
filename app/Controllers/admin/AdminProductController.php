@@ -37,7 +37,7 @@ class AdminProductController extends BaseController
             $row->subs = $subs;
         }
         $dataLayout['catalogs'] = $catalogs;
-
+        
         //Menu
         $catalogs=json_decode(json_encode($catalogs), True);
         $session = session();

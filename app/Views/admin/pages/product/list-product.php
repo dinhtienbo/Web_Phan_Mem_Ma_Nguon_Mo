@@ -151,7 +151,7 @@
                                                     <option value=""></option>
                                                     <!-- kiem tra danh muc co danh muc con hay khong -->
                                                     <?php foreach ($catalogs as $row) : ?>
-                                                        <?php if (count($row->subs) > 1) : ?>
+                                                        <?php if (count($row->subs) >= 1) : ?>
                                                             <optgroup label="<?php echo $row->name ?>">
                                                                 <?php foreach ($row->subs as $sub) : ?>
                                                                     <option value="<?php echo $sub->id ?>"> <?php echo $sub->name ?> </option>
