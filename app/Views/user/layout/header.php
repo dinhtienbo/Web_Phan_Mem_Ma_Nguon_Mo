@@ -64,19 +64,27 @@
 					<div class="shop-menu pull-right">
 						<ul class="nav navbar-nav">
 							<?php if (session()->get('login')) : ?>
-								<li><a href="#"><i class="fa fa-user"></i> <?= session()->get('login')['name']?></a></li>
+								<li><a href="#"><i class="fa fa-user"></i><?=session()->get('login')['name']?></a></li>
+							<?php elseif (session()->get('loginAdmin')) : ?>
+								<li><a href="#"><i class="fa fa-user"></i><?=session()->get('loginAdmin')['name']?></a></li>
+							
 							<?php else : ?>
 								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-							<?php endif; ?>
+							<?php endif ?>
+
 							<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 							<li><a href="cart/checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 							<li><a href="cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 
 							<?php if (session()->get('login')) : ?>
 								<li><a href="logout"><i class="fa fa-lock"></i> Logout</a></li>
+							<?php elseif (session()->get('loginAdmin')) : ?>
+								<li><a href="logout"><i class="fa fa-lock"></i> Logout</a></li>
 							<?php else : ?>
 								<li><a href="login"><i class="fa fa-lock"></i> Login</a></li>
-							<?php endif; ?>
+							<?php endif ?>
+
+							
 						</ul>
 					</div>
 				</div>
@@ -130,4 +138,4 @@
 		</div>
 	</div>
 	<!--/header-bottom-->
-</header
+</header>
