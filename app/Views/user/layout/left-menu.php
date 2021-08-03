@@ -52,10 +52,6 @@
 		</div>
 		<!--/price-range-->
 
-		<div class="shipping text-center">
-			<!--shipping-->
-			<img src="acsset/user/images/home/shipping.jpg" alt="" />
-		</div>
 		<!--/shipping-->
 
 	</div>

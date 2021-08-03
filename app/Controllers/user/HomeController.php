@@ -3,17 +3,21 @@
 namespace App\Controllers\user;
 use App\Models\ProductModel;
 use App\Controllers\BaseController;
+use App\Models\CategoryModel;
+
 
 
 class HomeController extends BaseController
 {
 
+	private $catalog;
 	private $product;
 
 	public function __construct()
     {
         parent::__construct();
         $this->product = new ProductModel();
+		$this->catalog = new CategoryModel();
         $this->product->protect(false);
     }
 
@@ -24,6 +28,8 @@ class HomeController extends BaseController
 		$newProducts = json_decode(json_encode($this->product->getNewProduct()), True);
 		$buyProducts = json_decode(json_encode($this->product->getTopBuyProduct()), True);
 		$viewProducts = json_decode(json_encode($this->product->getTopViewProduct()), True);
+
+
 
 		$dataLayout=[
 			'newProducts'=>$newProducts,

@@ -33,7 +33,7 @@ class ProductController extends BaseController
 		$dataLayout['products'] = json_decode(json_encode($this->catalog->metaKey($meta_key)), True);
         if(!$dataLayout['products'])
         {
-            return redirect()->back();
+            return redirect('/');
         }
         $data = $this ->loadUserLayout($data,"Danh sách sản phẩm","user/pages/product","user/layout/left-menu","user/layout/slide",$dataLayout);
 		return view('user\main',$data);

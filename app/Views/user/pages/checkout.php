@@ -1,4 +1,5 @@
 <section id="cart_items">
+<form action="cart/thanhtoan" method="post">
     <div class="container">
         <div class="breadcrumbs">
             <ol class="breadcrumb">
@@ -9,11 +10,7 @@
         <!--/breadcrums-->
 
         <div class="step-one">
-            <h2 class="heading">Bước 1</h2>
-        </div>
-        <div class="checkout-options">
-            <h3>Nhập thông tin</h3>
-           
+            <h2 class="heading">Bước 1: Nhập thông tin</h2>
         </div>
         <!--/checkout-options-->
 
@@ -29,18 +26,17 @@
                     <div class="bill-to">
                         <p>Thông tin</p>
                         <div class="form-one">
-                            <form>
-                                <input type="text" placeholder="Tên khách hàng">
+                                <input type="text" placeholder="Tên khách hàng" name ='name' >
 
-                                <input type="text" placeholder="Điện thoại *">
-                            </form>
+                                <input type="text" placeholder="Điện thoại *" name="phone" >
+                           
                         </div>
                         <div class="form-two">
-                            <form>
-                                <input type="text" placeholder="Email*">
-                                <input type="text" placeholder="Địa chỉ">
+                           
+                                <input type="text" placeholder="Email*" name='email' >
+                                <input type="text" placeholder="Địa chỉ"name='address' >
 
-                            </form>
+                          
                         </div>
                     </div>
                 </div>
@@ -136,6 +132,8 @@
                 <label><input type="checkbox"> Paypal</label>
             </span>
         </div>
+        <button type="submit" class="btn btn-warning"> Thanh Toán</button>
     </div>
+    </form>
 </section>
 <!--/#cart_items-->
