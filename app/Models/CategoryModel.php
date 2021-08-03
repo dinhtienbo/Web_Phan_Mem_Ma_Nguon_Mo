@@ -19,5 +19,11 @@ class CategoryModel extends BaseModel
         return $this->db->table($this->table)->where('parent_id',$id)->get()->getResult();
     }
 
+    public function metaKey($metaKey)
+    {
+            $db = \Config\Database::connect();
+            return $this->db->table($this->table)->join('product','product.catalog_id=catalog.id')->like('catalog.meta_key',$metaKey)->get()->getResult();
+    }
+
 }
 ?>

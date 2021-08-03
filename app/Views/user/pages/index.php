@@ -1,13 +1,13 @@
 <div class="col-sm-9 padding-right">
     <div class="features_items">
-        <!--features_items-->
-        <h2 class="title text-center">Sản phẩm mới</h2>
+      <!--features_items-->
+      <h2 class="title text-center">Sản phẩm mới</h2>
         <?php foreach ($newProducts as $row) : ?>
             <div class="col-sm-4">
                 <div class="product-image-wrapper">
                     <div class="single-products">
                         <div class="productinfo text-center">
-                            <img src="upload/product/<?= $row['image_link'] ?>" alt="" />
+                            <img src="upload/product/<?= $row['image_link']?>" width="245" height="249" alt="" />
                             <h2><?= ($row['price'] - $row['discount'])?> USD</h2>
                             <p><?= $row['name'] ?></p>
                             <a href="cart/add/<?= $row['id'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>

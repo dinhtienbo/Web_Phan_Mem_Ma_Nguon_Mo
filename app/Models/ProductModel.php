@@ -25,7 +25,7 @@ class ProductModel extends BaseModel
     public function metaKey($metaKey)
     {
             $db = \Config\Database::connect();
-            return $this->db->table($this->table)->where('meta_key',$metaKey)->get()->getRow();
+            return $this->db->table($this->table)->like('meta_key',$metaKey)->get()->getRow();
     }
 
     public function getNewProduct()

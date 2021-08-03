@@ -10,13 +10,13 @@
 
             <div class="userNav">
                 <ul>
-                    <li><a href="http://localhost/webphp/" target="_blank">
+                    <li><a href="" target="_blank">
                             <img style="margin-top:7px;" src="acsset/admin/images/icons/light/home.png" />
                             <span>Trang chủ</span>
                         </a></li>
 
                     <!-- Logout -->
-                    <li><a href="home/logout.html">
+                    <li><a href="logout">
                             <img src="acsset/admin/images/icons/topnav/logout.png" alt="" />
                             <span>Đăng xuất</span>
                         </a></li>
@@ -161,7 +161,7 @@
                         <div class="formRow">
                             <label for="param_cat" class="formLeft">Thể loại:<span class="req">*</span></label>
                             <div class="formRight">
-                                <select name="catalog" class="left">
+                                <select name="catalog_id" class="left">
                                     <option value=""></option>
                                     <!-- kiem tra danh muc co danh muc con hay khong -->
                                     <?php foreach ($catalogs as $row) : ?>

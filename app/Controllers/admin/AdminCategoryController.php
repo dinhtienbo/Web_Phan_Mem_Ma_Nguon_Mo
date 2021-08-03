@@ -137,7 +137,8 @@ class AdminCategoryController extends BaseController
             'name' => 'is_unique[catalog.name]|max_length[100]',
           
             'parent_id' => 'numeric',
-            'sort_order' => 'numeric'
+            'sort_order' => 'numeric',
+            'meta_key' =>'is_unique[catalog.meta_key]'
         ];
         $message = [
             'name' => [
@@ -151,6 +152,10 @@ class AdminCategoryController extends BaseController
 
             'sort_order' => [
                 'numeric' => 'Thứ tự hiển thị phải là số nguyên',
+            ],
+
+            'meta_key' => [
+                'is_unique' => 'Từ khóa này đã tồn tại!',
             ],
 
         ];

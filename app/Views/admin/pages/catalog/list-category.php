@@ -80,8 +80,9 @@
                     <tr>
                         <td style="width:10px;"><img src="acsset/admin/images/icons/tableArrows.png" /></td>
                         <td style="width:80px;">Mã số</td>
-                        <td style="width:80px;">Thư tự hiện thị</td>
+                        <td style="width:80px;">Thứ tự hiện thị</td>
                         <td>Tên danh mục</td>
+                        <td style="width:80px;">Từ khóa</td>
                         <td style="width:100px;">Hành động</td>
                     </tr>
                 </thead>
@@ -114,7 +115,7 @@
                                 <?=$row['name'] ?>
                                 </span>
                             </td>
-
+                            <td class="textC"><?=$row['meta_key'] ?></td>
 
                             <td class="option">
                                 <a href="admin/List-Category/Edit/<?= $row['id'] ?>" title="Chỉnh sửa" class="tipS ">

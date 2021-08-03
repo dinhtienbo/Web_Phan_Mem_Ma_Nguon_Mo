@@ -116,6 +116,16 @@
                     <div class="clear"></div>
                 </div>
 
+                <div class="formRow">
+                    <label for="param_name" class="formLeft">Từ khóa:</label>
+                    <div class="formRight">
+                        <span class="oneTwo"><input type="text" _autocheck="true" id="param_sort_order"  name="meta_key"></span>
+                        <span class="autocheck" name="sort_order_autocheck"></span>
+                        <div class="clear error" name="sort_order_error"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
 
                 <div class="formSubmit">
                     <input type="submit" class="redB" value="Thêm mới">

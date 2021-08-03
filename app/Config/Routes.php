@@ -52,6 +52,7 @@ $routes->group('/',['filter'=>'userFilter'], function ($routes) {
 	//Product
 	$routes->group('product', function ($routes) {
 	$routes->get('', 'user\ProductController::product');
+	$routes->get('category/(:any)', 'user\ProductController::listcategory/$1');
 	$routes->get('product-detail/(:any)', 'user\ProductDetailController::productdetail/$1');
 	});
 });

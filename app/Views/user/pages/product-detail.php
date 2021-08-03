@@ -3,7 +3,7 @@
         <!--product-details-->
         <div class="col-sm-5">
             <div class="view-product">
-                <img src="upload/product/<?= $product['image_link'] ?>" alt="" />
+                <img src="upload/product/<?= $product['image_link'] ?>" width="245" height="249" alt="" />
                 <h3>ZOOM</h3>
             </div>
             <div id="similar-product" class="carousel slide" data-ride="carousel">
@@ -12,17 +12,17 @@
                 <div class="carousel-inner">
                     <div class="item active">
                         <?php foreach($list as $row) :?>
-                        <a href=""><img src="upload/product/<?= $row?>" alt=""></a>
+                        <a href=""><img src="upload/product/<?= $row?>" width="65" height="65" alt=""></a>
                         <?php endforeach ?>
                     </div>
                     <div class="item">
                     <?php foreach($list as $row) :?>
-                        <a href=""><img src="upload/product/<?= $row?>" alt=""></a>
+                        <a href=""><img src="upload/product/<?= $row?>"  width="65" height="65" alt=""></a>
                         <?php endforeach ?>
                     </div>
                     <div class="item">
                     <?php foreach($list as $row) :?>
-                        <a href=""><img src="upload/product/<?= $row?>" alt=""></a>
+                        <a href=""><img src="upload/product/<?= $row?>" width="65" height="65" alt=""></a>
                         <?php endforeach ?>
                     </div>
 
@@ -41,7 +41,7 @@
         <div class="col-sm-7">
             <div class="product-information">
                 <!--/product-information-->
-                <img src="acsset/user/images/product-details/new.jpg" class="newarrival" alt="" />
+                <img src="acsset/user/images/product-details/new.jpg"  class="newarrival" alt="" />
                 <h2><?= $product['name'] ?></h2>
 
                 <img src="acsset/user/images/product-details/rating.png" alt="" />

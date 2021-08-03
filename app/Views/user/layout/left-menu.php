@@ -17,8 +17,9 @@
 				<div id="<?=$row->name ?>" class="panel-collapse collapse">
 					<div class="panel-body">
 						<ul>
+						<li><a href="product/category/<?php echo $row->meta_key ?>"><?php echo $row->name ?></a></li>
 						<?php foreach ($row->subs as $sub) : ?>
-							<li><a href="#"><?php echo $sub->name ?></a></li>
+							<li><a href="product/category/<?php echo $sub->meta_key ?>"><?php echo $sub->name ?></a></li>
 						<?php endforeach; ?>
 						</ul>
 					</div>
