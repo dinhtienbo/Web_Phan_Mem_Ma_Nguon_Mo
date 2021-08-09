@@ -11,7 +11,7 @@
 <?php if (session('successMsg')) : ?>
     <?php foreach ((session('successMsg')) as $success) : ?>
         <div class="alert alert-success">
-            <strong>SThông báo:</strong> <?= $success ?>
+            <strong>Thông báo:</strong> <?= $success ?>
         </div>
         <?php break; ?>
     <?php endforeach ?>

@@ -27,10 +27,12 @@
                 <div class="signup-form">
                     <!--sign up form-->
                     <h2>New User Signup!</h2>
-                    <form action="#">
-                        <input type="text" placeholder="Name" />
-                        <input type="email" placeholder="Email Address" />
-                        <input type="password" placeholder="Password" />
+                    <?= view('message/message') ?>
+                    <form action="registration" method="post">
+                        <input type="text" placeholder="Name" name="name" />
+                        <input type="email" placeholder="Email Address" name="email" />
+                        <input type="password" placeholder="Password" name="password" />
+                        <input type="password" placeholder="RePassword" name="password_confirm" />
                         <button type="submit" class="btn btn-default">Signup</button>
                     </form>
                 </div>

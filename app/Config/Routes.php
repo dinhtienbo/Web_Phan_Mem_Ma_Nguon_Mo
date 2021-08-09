@@ -38,6 +38,7 @@ $routes->group('/',['filter'=>'userFilter'], function ($routes) {
 	$routes->get('login', 'user\LoginController::login');
 	$routes->get('logout', 'user\LoginController::logout');
 	$routes->post('login', 'user\LoginController::checklogin');
+	$routes->post('registration', 'user\LoginController::registration');
 
 	//Cart-Checkout
 	$routes->group('cart', function ($routes) {
@@ -108,6 +109,7 @@ $routes->group('admin',['filter'=>'adminFilter'], function ($routes) {
 	//Admin transaction
 	$routes->group('List-Transaction', function ($routes) {
 		$routes->get('', 'admin\AdminTransactionController::index');
+		$routes->get('Delete/(:num)', 'admin\AdminTransactionController::Delete/$1');
 	});
 
 	//Admin User

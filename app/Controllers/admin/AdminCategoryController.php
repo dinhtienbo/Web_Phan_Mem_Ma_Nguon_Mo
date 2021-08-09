@@ -4,16 +4,19 @@ namespace App\Controllers\admin;
 
 use App\Controllers\BaseController;
 use App\Models\CategoryModel;
+use App\Models\ProductModel;
 Use App\Common\ResultUtils;
 use Exception;
 
 class AdminCategoryController extends BaseController
 {
     private $category;
+    private $product;
 
     public function __construct()
     {
         parent::__construct();
+        $this->product = new ProductModel();
         $this->category = new CategoryModel();
         $this->category->protect(false);
     }
@@ -192,6 +195,7 @@ class AdminCategoryController extends BaseController
     {
         $data=json_decode(json_encode($this->category->getById($id)), True);
         $this->category->Delete($id);
+        $this->product->deleteCatalog($id);
         return redirect("admin/List-Category");
     }
 }

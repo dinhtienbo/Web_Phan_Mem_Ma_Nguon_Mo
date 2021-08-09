@@ -61,7 +61,7 @@ class CheckoutController extends BaseController
 				'user_phone'    => $user['phone'],
 				'message'       => '', //ghi chú khi mua hàng
 				'amount'        => $total,//tong so tien can thanh toan
-				'payment'       => "", //cổng thanh toán,
+				'payment'       => $this->request->getPost('payment'), //cổng thanh toán,
 				'created' => $time,
 
 			);
@@ -75,7 +75,7 @@ class CheckoutController extends BaseController
 				'user_phone'    => $this->request->getPost('phone'),
 				'message'       => $this->request->getPost('message'), //ghi chú khi mua hàng
 				'amount'        => $total,//tong so tien can thanh toan
-				'payment'       => "", //cổng thanh toán,
+				'payment'       => $this->request->getPost('payment'), //cổng thanh toán,
 				'created' => $time,
 
 			);

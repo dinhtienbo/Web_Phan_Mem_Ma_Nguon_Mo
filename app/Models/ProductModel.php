@@ -45,4 +45,10 @@ class ProductModel extends BaseModel
         $db = \Config\Database::connect();
         return $this->db->table($this->table)->orderBy('view','DESC')->get(4)->getResult();
     }
+
+    public function deleteCatalog($id)
+    {
+        $db = \Config\Database::connect();
+        return $this->db->table($this->table)->where('catalog_id',$id)->delete();
+    }
 }

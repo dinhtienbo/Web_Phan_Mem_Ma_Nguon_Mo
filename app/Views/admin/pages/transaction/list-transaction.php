@@ -191,11 +191,11 @@
                         <td class="textC"><?=$row['created']?></td>
 
                         <td class="textC">
-                            <a href="List-Transaction/View/<?=$row['id']?>" class="lightbox">
+                            <a href="admin/List-Transaction/View/<?=$row['id']?>" class="lightbox">
                                 <img src="acsset/admin/images/icons/color/view.png" />
                             </a>
 
-                            <a href="List-Transaction/Delete/<?=$row['id']?>" title="Xóa" class="tipS verify_action">
+                            <a href="admin/List-Transaction/Delete/<?=$row['id']?>" title="Xóa" onClick="return confirm('Bạn có muốn xóa?')"  class="tipS verify_action">
                                 <img src="acsset/admin/images/icons/color/delete.png" />
                             </a>
                         </td>
