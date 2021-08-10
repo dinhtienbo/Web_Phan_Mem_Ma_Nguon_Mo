@@ -51,4 +51,16 @@ class ProductModel extends BaseModel
         $db = \Config\Database::connect();
         return $this->db->table($this->table)->where('catalog_id',$id)->delete();
     }
+
+    public function addView($metaKey)
+    {
+        $db = \Config\Database::connect();
+        return $this->db->table($this->table)->set('view','view+1', false)->where('meta_key',$metaKey)->update();
+    }
+
+    public function addBuy($id,$qty)
+    {
+        $db = \Config\Database::connect();
+        return $this->db->table($this->table)->set('buyed',$qty, false)->where('id',$id)->update();
+    }
 }

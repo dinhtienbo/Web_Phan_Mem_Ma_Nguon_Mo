@@ -36,7 +36,7 @@
                                     <div class="cart_quantity_button">
                                         <a class="cart_quantity_up" href="cart/add/<?= $row['id'] ?>"> + </a>
                                         <input class="cart_quantity_input" type="text" name="quantity[]" value="<?= $row['qty'] ?>" autocomplete="off" size="2">
-                                        <a class="cart_quantity_down" href="cart/minus"> - </a>
+                                        <a class="cart_quantity_down" href="cart/minus/<?=$row['id']?>"> - </a>
                                     </div>
                                 </td>
                                 <td class="cart_total">

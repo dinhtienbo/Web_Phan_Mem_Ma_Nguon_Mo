@@ -8,13 +8,13 @@
                     <div class="single-products">
                         <div class="productinfo text-center">
                             <img style="height: 110px; width: 110px;" src="upload/product/<?= $product['image_link'] ?>" alt="" />
-                            <h2><?= $product['price'] ?>USD</h2>
+                            <h2>$<?= $product['price'] ?></h2>
                             <p><?= $product['name'] ?></p>
                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
                         <div class="product-overlay">
                             <div class="overlay-content">
-                                <h2><?= $product['price'] ?> VND</h2>
+                                <h2>$<?= $product['price'] ?></h2>
                                 <a href="product/product-detail/<?=$product['meta_key']?>"><p><?= $product['name'] ?></p></a>
                                 <a href="" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                             </div>

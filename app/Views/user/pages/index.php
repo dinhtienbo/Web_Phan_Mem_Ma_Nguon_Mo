@@ -8,7 +8,7 @@
                     <div class="single-products">
                         <div class="productinfo text-center">
                             <img src="upload/product/<?= $row['image_link']?>" width="245" height="249" alt="" />
-                            <h2><?= ($row['price'] - $row['discount'])?> USD</h2>
+                            <h2>$<?= ($row['price'] - $row['discount'])?></h2>
                             <p><?= $row['name'] ?></p>
                             <a href="cart/add/<?= $row['id'] ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
@@ -16,10 +16,10 @@
                             <div class="overlay-content">
                                 <h2><?php if ($row['discount'] > 0) : ?>
                                         <?php $price_new = $row['price']  - $row['discount']; ?>
-                                        <b><?php echo number_format($price_new) ?> USD</b>
-                                        <p style="text-decoration:line-through"><?php echo number_format($row['price']) ?> đ</p>
+                                        <b>$<?php echo number_format($price_new) ?></b>
+                                        <p style="text-decoration:line-through">$ <?php echo number_format($row['price']) ?></p>
                                     <?php else : ?>
-                                        <b><?php echo number_format($row['price']) ?> USD</b>
+                                        <b>$<?php echo number_format($row['price']) ?></b>
                                         <?php endif; ?>
                                 </h2>
                                 <p><a href="product/product-detail/<?= $row['meta_key'] ?>"><?= $row['name'] ?></a></p>

@@ -22,7 +22,10 @@ class CartController extends BaseController
 	{
 		
         $data=null;
-		$dataLayout['items'] = array_values(session('cart'));
+		$session = session();
+		$dataLayout['items']=[];
+		if($session->has('cart'))
+			$dataLayout['items'] = array_values(session('cart'));
         $data = $this ->loadUserLayout($data,"Giỏ hàng","user/pages/cart","","",$dataLayout);
 		return view('user\main',$data);
 	}
@@ -62,15 +65,18 @@ class CartController extends BaseController
 		return redirect()->back();
 	}
 
-	public function minus()
+	public function minus($id)
 	{
 		$cart = array_values(session('cart'));
 		for($i=0; $i <count($cart);$i++)
 		{
-			$cart[$i]['qty']--;
-			if($cart[$i]['qty']==0){
+			if($cart[$i]['id']==$id)
+			{
+				$cart[$i]['qty']--;
+				if($cart[$i]['qty']==0){
 				unset($cart[$i]);
 				break;
+				}
 			}
 		}
 		$session= session();

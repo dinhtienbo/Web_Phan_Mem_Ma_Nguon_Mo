@@ -47,7 +47,7 @@ $routes->group('/',['filter'=>'userFilter'], function ($routes) {
 	$routes->get('add/(:num)', 'user\CartController::add/$1');
 	$routes->get('remove/(:num)', 'user\CartController::remove/$1');
 	$routes->post('upload', 'user\CartController::upload');
-	$routes->get('minus', 'user\CartController::minus');
+	$routes->get('minus/(:num)', 'user\CartController::minus/$1');
 	$routes->post('thanhtoan', 'user\CheckoutController::thanhtoan');
 	});
 

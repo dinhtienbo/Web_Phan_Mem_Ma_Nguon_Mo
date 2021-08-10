@@ -21,6 +21,7 @@ class ProductDetailController extends BaseController
 	public function productdetail($meta_key)
 	{	
         $data=null;
+        $this->product->addView($meta_key);
 		$products = json_decode(json_encode($this->product->metaKey($meta_key)), True);
         $list= explode(',',$products['image_list']);
         $dataLayout=array(

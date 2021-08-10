@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Controllers\user;
+
 use App\Controllers\BaseController;
-use App\Models\OderModel;
+use App\Models\ProductModel;
 use CodeIgniter\I18n\Time;
 use App\Models\OrderModel;
 use App\Models\TransactionModel;
@@ -12,47 +13,55 @@ class CheckoutController extends BaseController
 {
 
 	private $order;
-    private $transaction;
+	private $transaction;
+	private $product;
 	public function __construct()
-    {
-        parent::__construct();
-        $this->order = new OrderModel();
-        $this->transaction = new TransactionModel();
-     
-    }
+	{
+		parent::__construct();
+		$this->order = new OrderModel();
+		$this->transaction = new TransactionModel();
+		$this->product = new ProductModel();
+	}
 
 	public function checkout()
 	{
-		
-        $data=null;
+
+		$data = null;
 		$total = 0;
-		$items = array_values(session('cart'));
-		foreach($items as $item)
-		{
-			$total+=($item['price']*$item['qty']);
+		$items = [];
+		$session = session();
+		if ($session->has('cart')) {
+			$items = array_values(session('cart'));
+			foreach ($items as $item) {
+				$total += ($item['price'] * $item['qty']);
+			}
+			$dataLayout['items'] = array_values(session('cart'));
+			$dataLayout['total'] = $total;
 		}
-		$dataLayout['items'] = array_values(session('cart'));
-		$dataLayout['total'] = $total;
-        $data = $this ->loadUserLayout($data,"Thủ tục thanh toán","user/pages/checkout","","",$dataLayout);
-		return view('user\main',$data);
+		else
+		{
+			$dataLayout['items']=[];
+			$dataLayout['total']=0;
+		}
+		$data = $this->loadUserLayout($data, "Thủ tục thanh toán", "user/pages/checkout", "", "", $dataLayout);
+		return view('user\main', $data);
 	}
 
 	public function thanhtoan()
 	{
 		$total = 0;
 		$items = array_values(session('cart'));
-		foreach($items as $item)
-		{
-			$total+=($item['price']*$item['qty']);
+		foreach ($items as $item) {
+			$total += ($item['price'] * $item['qty']);
 		}
 		$session = session();
 		$user = $session->get('login');
-		
-		
-		$time = new Time('now', 'Asia/Ho_Chi_Minh');
-        $time = $time->format('Y-m-d H:i:s');
 
-		if($user){
+
+		$time = new Time('now', 'Asia/Ho_Chi_Minh');
+		$time = $time->format('Y-m-d H:i:s');
+
+		if ($user) {
 			$data = array(
 				'status'   => 0, //trang thai chua thanh toan
 				'user_id'  => $user['id'], //id thanh vien mua hang neu da dang nhap
@@ -60,13 +69,12 @@ class CheckoutController extends BaseController
 				'user_name'     => $user['name'],
 				'user_phone'    => $user['phone'],
 				'message'       => '', //ghi chú khi mua hàng
-				'amount'        => $total,//tong so tien can thanh toan
+				'amount'        => $total, //tong so tien can thanh toan
 				'payment'       => $this->request->getPost('payment'), //cổng thanh toán,
 				'created' => $time,
 
 			);
-		}
-		else
+		} else
 			$data = array(
 				'status'   => 0, //trang thai chua thanh toan
 				'user_id'  => "", //id thanh vien mua hang neu da dang nhap
@@ -74,25 +82,31 @@ class CheckoutController extends BaseController
 				'user_name'     => $this->request->getPost('name'),
 				'user_phone'    => $this->request->getPost('phone'),
 				'message'       => $this->request->getPost('message'), //ghi chú khi mua hàng
-				'amount'        => $total,//tong so tien can thanh toan
+				'amount'        => $total, //tong so tien can thanh toan
 				'payment'       => $this->request->getPost('payment'), //cổng thanh toán,
 				'created' => $time,
 
 			);
 		$this->transaction->create($data);
 		//Lấy id transaction vừa tạo
-		$transaction_id =$this->transaction->insertID();
-		foreach($items as $item)
-		{
+		$transaction_id = $this->transaction->insertID();
+		foreach ($items as $item) {
 			$dataoOder = array(
-				'transaction_id' =>$transaction_id,
-				'product_id' =>$item['id'],
-				'qty' =>$item['qty'],
-				'amount'=>$item['qty']*$item['price'],
-				'status' =>0,
+				'transaction_id' => $transaction_id,
+				'product_id' => $item['id'],
+				'qty' => $item['qty'],
+				'amount' => $item['qty'] * $item['price'],
+				'status' => 0,
 			);
 			$this->order->create($dataoOder);
+
+			//Tăng lượt mua
+			$array = json_decode(json_encode($this->product->getById($item['id'])), True);
+			$sl = $array['buyed'] + $item['qty'];
+			
+			$this->product->addBuy($item['id'], $sl);
 		}
+
 		$session->remove('cart');
 		return redirect('/');
 	}
