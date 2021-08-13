@@ -40,4 +40,10 @@ class HomeController extends BaseController
         $data = $this ->loadUserLayout($data,"Trang chủ","user/pages/index",'user/layout/left-menu',"user/layout/slide",$dataLayout);
 		return view('user\main',$data);
 	}
+
+	public function search()
+	{
+		$requestData=$this->request;
+		
+	}
 }

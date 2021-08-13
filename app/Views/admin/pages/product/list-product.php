@@ -228,8 +228,8 @@
                             <td class="textR">
                                 <?php if ($row->discount > 0) : ?>
                                     <?php $price_new = $row->price - $row->discount; ?>
-                                    <b style="color:red"><?php echo number_format($price_new) ?> đ</b>
-                                    <p style="text-decoration:line-through"><?php echo number_format($row->price) ?> đ</p>
+                                    <b style="color:red">$<?php echo number_format($price_new) ?></b>
+                                    <p style="text-decoration:line-through">$<?php echo number_format($row->price) ?></p>
                                 <?php else : ?>
                                     <b style="color:red"><?php echo number_format($row->price) ?> đ</b>
                                 <?php endif; ?>

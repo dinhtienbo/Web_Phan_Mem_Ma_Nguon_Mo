@@ -143,7 +143,7 @@
                         <!-- Price -->
                         <div class="formRow">
                             <label for="param_discount" class="formLeft">
-                                Giảm giá (VND)
+                                Giảm giá (USD)
                                 <span></span>:
                             </label>
                             <div class="formRight">
@@ -178,20 +178,6 @@
                                 </select>
                                 <span class="autocheck" name="cat_autocheck"></span>
                                 <div class="clear error" name="cat_error"></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-
-
-                        <!-- warranty -->
-                        <div class="formRow">
-                            <label for="param_warranty" class="formLeft">
-                                Bảo hành :
-                            </label>
-                            <div class="formRight">
-                                <span class="oneFour"><input type="text" id="param_warranty" name="warranty" value="<?=$product->warranty?>"></span>
-                                <span class="autocheck" name="warranty_autocheck"></span>
-                                <div class="clear error" name="warranty_error"></div>
                             </div>
                             <div class="clear"></div>
                         </div>

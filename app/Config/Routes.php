@@ -33,6 +33,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->group('/',['filter'=>'userFilter'], function ($routes) {
 	$routes->get('', 'user\HomeController::index');
+	$routes->get('search', 'user\HomeController::search');
 
 	//Login
 	$routes->get('login', 'user\LoginController::login');

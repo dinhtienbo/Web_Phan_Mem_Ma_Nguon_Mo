@@ -145,7 +145,7 @@
                         <!-- Price -->
                         <div class="formRow">
                             <label for="param_discount" class="formLeft">
-                                Giảm giá (VND)
+                                Giảm giá (USD)
                                 <span></span>:
                             </label>
                             <div class="formRight">
@@ -185,19 +185,6 @@
                         </div>
 
 
-                        <!-- warranty -->
-                        <div class="formRow">
-                            <label for="param_warranty" class="formLeft">
-                                Bảo hành :
-                            </label>
-                            <div class="formRight">
-                                <span class="oneFour"><input type="text" id="param_warranty" name="warranty" value="<?= old('warranty') ?>"></span>
-                                <span class="autocheck" name="warranty_autocheck"></span>
-                                <div class="clear error" name="warranty_error"></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-
                         <div class="formRow">
                             <label for="param_sale" class="formLeft">Tặng quà:</label>
                             <div class="formRight">
@@ -213,17 +200,7 @@
                     <div class="tab_content pd0" id="tab2" >
 
                         <div class="formRow">
-                            <label for="param_meta_desc" class="formLeft">Meta description:</label>
-                            <div class="formRight">
-                                <span class="oneTwo"><textarea cols="" rows="4" _autocheck="true" id="param_meta_desc" name="meta_desc"></textarea></span>
-                                <span class="autocheck" name="meta_desc_autocheck"></span>
-                                <div class="clear error" name="meta_desc_error"></div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="formRow">
-                            <label for="param_meta_key" class="formLeft">Meta keywords:</label>
+                            <label for="param_meta_key" class="formLeft">Từ khóa tìm kiếm:</label>
                             <div class="formRight">
                                 <span class="oneTwo"><textarea cols="" rows="4" _autocheck="true" id="param_meta_key" name="meta_key" ><?= old('meta_key') ?></textarea></span>
                                 <span class="autocheck" name="meta_key_autocheck"></span>
