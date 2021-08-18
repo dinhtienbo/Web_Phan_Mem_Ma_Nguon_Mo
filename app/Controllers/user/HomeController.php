@@ -43,7 +43,11 @@ class HomeController extends BaseController
 
 	public function search()
 	{
-		$requestData=$this->request;
+		$data=null;
+		if($this->request->getMethod() == 'get')
+			$dataLayout['products'] = json_decode(json_encode($this -> product->searchName($this->request->getGet('search'))), True);
+        $data = $this ->loadUserLayout($data,"Danh sách sản phẩm","user/pages/product","user/layout/left-menu","user/layout/slide",$dataLayout);
+		return view('user\main',$data);
 		
 	}
 }

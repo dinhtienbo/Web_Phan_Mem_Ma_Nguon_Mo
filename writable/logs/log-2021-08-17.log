@@ -1,0 +1,7 @@
+CRITICAL - 2021-08-17 12:04:14 --> Cannot use object of type stdClass as array
+#0 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\user\HomeController->search()
+#1 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\HomeController))
+#2 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
+#5 {main}

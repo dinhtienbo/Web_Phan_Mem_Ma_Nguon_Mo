@@ -63,4 +63,11 @@ class ProductModel extends BaseModel
         $db = \Config\Database::connect();
         return $this->db->table($this->table)->set('buyed',$qty, false)->where('id',$id)->update();
     }
+
+    public function searchName($name)
+    {
+        $db = \Config\Database::connect();
+        return $this->db->table($this->table)->like('name',$name)->get(4)->getResult();;
+    }
+
 }

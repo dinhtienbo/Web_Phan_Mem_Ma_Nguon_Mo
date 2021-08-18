@@ -1,0 +1,22 @@
+ERROR - 2021-08-18 02:16:03 --> Column 'warranty' cannot be null
+ERROR - 2021-08-18 02:16:52 --> Column 'meta_desc' cannot be null
+CRITICAL - 2021-08-18 04:38:23 --> Cannot use object of type stdClass as array
+#0 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\user\HomeController->search()
+#1 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\HomeController))
+#2 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
+#5 {main}
+CRITICAL - 2021-08-18 04:40:52 --> Undefined array key "image_link"
+#0 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Views\user\pages\product.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\PHP\\htdocs\\W...', 10)
+#1 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\PHP\\htdocs\\W...')
+#2 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('user/pages/prod...', Array, true)
+#4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(78): view('user/pages/prod...', Array)
+#5 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\user\HomeController.php(49): App\Controllers\BaseController->loadUserLayout(Array, 'Danh s\xC3\xA1ch s\xE1\xBA\xA3...', 'user/pages/prod...', 'user/layout/lef...', 'user/layout/sli...', Array)
+#6 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\user\HomeController->search()
+#7 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\HomeController))
+#8 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
+#11 {main}

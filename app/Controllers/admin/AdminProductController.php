@@ -125,10 +125,8 @@ class AdminProductController extends BaseController
                 'image_link' => (string)$image_link,
                 'image_list' => $str,
                 'discount'   => $this->request->getPost('discount'),
-                'warranty'   => $this->request->getPost('warranty'),
                 'gifts'      => $this->request->getPost('gifts'),
 
-                'meta_desc'  => $this->request->getPost('meta_desc'),
                 'meta_key'   => $this->request->getPost('meta_key'),
                 'content'    => $this->request->getPost('content'),
                 'created' => $time
