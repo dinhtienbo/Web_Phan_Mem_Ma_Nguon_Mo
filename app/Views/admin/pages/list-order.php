@@ -10,7 +10,7 @@
 
             <div class="userNav">
                 <ul>
-                    <li><a href="" target="_blank">
+                    <li><a href="admin" target="_blank">
                             <img style="margin-top:7px;" src="acsset/admin/images/icons/light/home.png" />
                             <span>Trang chủ</span>
                         </a></li>
@@ -74,7 +74,7 @@
                 <span class="titleIcon"><img src="acsset/admin/images/icons/tableArrows.png" /></span>
                 <h6>Danh sách Đơn hàng sản phẩm</h6>
 
-                <div class="num f12">Tổng số: <b>15</b></div>
+                <div class="num f12">Tổng số: <b><?= count($orders)?></b></div>
             </div>
 
             <table cellpadding="0" cellspacing="0" width="100%" class="sTable mTable myTable" id="checkAll">
@@ -163,42 +163,52 @@
                 </tfoot>
 
                 <tbody class="list_item">
+                <?php foreach($orders as $row) :?>
                     <tr class='row_20'>
 
-                        <td class="textC">20</td>
+                        <td class="textC"><?=$row['id']?></td>
 
                         <td>
                             <div class="image_thumb">
-                                <img src="../upload/product/product7.jpg" height="50">
+                                <img src="/upload/product/<?= $row['image_link'] ?>" height="50">
                                 <div class="clear"></div>
                             </div>
 
                             <a href="product/view/8.html" class="tipS" title="" target="_blank">
-                                <b>Tivi JVC 500</b>
+                                <b><?= $row['name'] ?></b>
                             </a>
                         </td>
 
                         <td class="textR">
-                            9,500,000 đ
-                            <p style='text-decoration:line-through'>10,000,000 đ</p>
+                            $<?= ($row['price'] - $row['discount']) ?>
+                            <p style='text-decoration:line-through'>$<?= $row['price'] ?></p>
                         </td>
 
-                        <td class="textC">1</td>
+                        <td class="textC"><?= $row['qty'] ?></td>
 
-                        <td class="textC">10,000,000</td>
+                        <td class="textC">$<?= $row['amount'] ?></td>
 
 
                         <td class="status textC">
                             <span class="pending">
-                                Chờ xử lý </span>
+                                <?php if($row['status']==0) :?>
+                                    Chờ xử lý
+                                <?php endif ?>
+
+                            </span>
                         </td>
 
                         <td class="status textC">
                             <span class="pending">
-                                Chờ xử lý </span>
+                                <?php if($row['data']=='') :?>
+                                    Chờ xử lý
+                                <?php else : ?>
+                                    Đã thanh toán
+                                <?php endif ?>
+                            </span>
                         </td>
 
-                        <td class="textC">16-08-2014</td>
+                        <td class="textC"><?= $row['created'] ?></td>
 
                         <td class="textC">
                             <a href="admin/tran/view/21.html" class="lightbox">
@@ -206,388 +216,7 @@
                             </a>
                         </td>
                     </tr>
-                    <tr class='row_19'>
-
-                        <td class="textC">19</td>
-
-                        <td>
-                            <div class="image_thumb">
-                                <img src="../upload/product/product1.jpg" height="50">
-                                <div class="clear"></div>
-                            </div>
-
-                            <a href="product/view/3.html" class="tipS" title="" target="_blank">
-                                <b>Tivi Akai</b>
-                            </a>
-                        </td>
-
-                        <td class="textR">
-                            5,000,000 đ
-                        </td>
-
-                        <td class="textC">1</td>
-
-                        <td class="textC">5,000,000</td>
-
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="textC">15-08-2014</td>
-
-                        <td class="textC">
-                            <a href="admin/tran/view/20.html" class="lightbox">
-                                <img src="acsset/admin/images/icons/color/view.png" />
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class='row_18'>
-
-                        <td class="textC">18</td>
-
-                        <td>
-                            <div class="image_thumb">
-                                <img src="../upload/product/product1.jpg" height="50">
-                                <div class="clear"></div>
-                            </div>
-
-                            <a href="product/view/3.html" class="tipS" title="" target="_blank">
-                                <b>Tivi Akai</b>
-                            </a>
-                        </td>
-
-                        <td class="textR">
-                            5,000,000 đ
-                        </td>
-
-                        <td class="textC">1</td>
-
-                        <td class="textC">5,000,000</td>
-
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="textC">15-08-2014</td>
-
-                        <td class="textC">
-                            <a href="admin/tran/view/19.html" class="lightbox">
-                                <img src="acsset/admin/images/icons/color/view.png" />
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class='row_17'>
-
-                        <td class="textC">17</td>
-
-                        <td>
-                            <div class="image_thumb">
-                                <img src="../upload/product/product1.jpg" height="50">
-                                <div class="clear"></div>
-                            </div>
-
-                            <a href="product/view/3.html" class="tipS" title="" target="_blank">
-                                <b>Tivi Akai</b>
-                            </a>
-                        </td>
-
-                        <td class="textR">
-                            5,000,000 đ
-                        </td>
-
-                        <td class="textC">1</td>
-
-                        <td class="textC">5,000,000</td>
-
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="textC">15-08-2014</td>
-
-                        <td class="textC">
-                            <a href="admin/tran/view/18.html" class="lightbox">
-                                <img src="acsset/admin/images/icons/color/view.png" />
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class='row_16'>
-
-                        <td class="textC">16</td>
-
-                        <td>
-                            <div class="image_thumb">
-                                <img src="../upload/product/product1.jpg" height="50">
-                                <div class="clear"></div>
-                            </div>
-
-                            <a href="product/view/3.html" class="tipS" title="" target="_blank">
-                                <b>Tivi Akai</b>
-                            </a>
-                        </td>
-
-                        <td class="textR">
-                            5,000,000 đ
-                        </td>
-
-                        <td class="textC">1</td>
-
-                        <td class="textC">5,000,000</td>
-
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="textC">15-08-2014</td>
-
-                        <td class="textC">
-                            <a href="admin/tran/view/17.html" class="lightbox">
-                                <img src="acsset/admin/images/icons/color/view.png" />
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class='row_15'>
-
-                        <td class="textC">15</td>
-
-                        <td>
-                            <div class="image_thumb">
-                                <img src="../upload/product/product1.jpg" height="50">
-                                <div class="clear"></div>
-                            </div>
-
-                            <a href="product/view/3.html" class="tipS" title="" target="_blank">
-                                <b>Tivi Akai</b>
-                            </a>
-                        </td>
-
-                        <td class="textR">
-                            5,000,000 đ
-                        </td>
-
-                        <td class="textC">1</td>
-
-                        <td class="textC">5,000,000</td>
-
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="textC">15-08-2014</td>
-
-                        <td class="textC">
-                            <a href="admin/tran/view/16.html" class="lightbox">
-                                <img src="acsset/admin/images/icons/color/view.png" />
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class='row_14'>
-
-                        <td class="textC">14</td>
-
-                        <td>
-                            <div class="image_thumb">
-                                <img src="../upload/product/product1.jpg" height="50">
-                                <div class="clear"></div>
-                            </div>
-
-                            <a href="product/view/3.html" class="tipS" title="" target="_blank">
-                                <b>Tivi Akai</b>
-                            </a>
-                        </td>
-
-                        <td class="textR">
-                            5,000,000 đ
-                        </td>
-
-                        <td class="textC">1</td>
-
-                        <td class="textC">5,000,000</td>
-
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="textC">15-08-2014</td>
-
-                        <td class="textC">
-                            <a href="admin/tran/view/15.html" class="lightbox">
-                                <img src="acsset/admin/images/icons/color/view.png" />
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class='row_13'>
-
-                        <td class="textC">13</td>
-
-                        <td>
-                            <div class="image_thumb">
-                                <img src="../upload/product/product7.jpg" height="50">
-                                <div class="clear"></div>
-                            </div>
-
-                            <a href="product/view/8.html" class="tipS" title="" target="_blank">
-                                <b>Tivi JVC 500</b>
-                            </a>
-                        </td>
-
-                        <td class="textR">
-                            9,500,000 đ
-                            <p style='text-decoration:line-through'>10,000,000 đ</p>
-                        </td>
-
-                        <td class="textC">1</td>
-
-                        <td class="textC">10,000,000</td>
-
-
-                        <td class="status textC">
-                            <span class="completed">
-                                Đã gửi hàng </span>
-                        </td>
-
-                        <td class="status textC">
-                            <span class="completed">
-                                Thành công </span>
-                        </td>
-
-                        <td class="textC">14-08-2014</td>
-
-                        <td class="textC">
-                            <a href="admin/tran/view/14.html" class="lightbox">
-                                <img src="acsset/admin/images/icons/color/view.png" />
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class='row_12'>
-
-                        <td class="textC">12</td>
-
-                        <td>
-                            <div class="image_thumb">
-                                <img src="../upload/product/product7.jpg" height="50">
-                                <div class="clear"></div>
-                            </div>
-
-                            <a href="product/view/8.html" class="tipS" title="" target="_blank">
-                                <b>Tivi JVC 500</b>
-                            </a>
-                        </td>
-
-                        <td class="textR">
-                            9,500,000 đ
-                            <p style='text-decoration:line-through'>10,000,000 đ</p>
-                        </td>
-
-                        <td class="textC">2</td>
-
-                        <td class="textC">20,000,000</td>
-
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="status textC">
-                            <span class="completed">
-                                Thành công </span>
-                        </td>
-
-                        <td class="textC">13-08-2014</td>
-
-                        <td class="textC">
-                            <a href="admin/tran/view/13.html" class="lightbox">
-                                <img src="acsset/admin/images/icons/color/view.png" />
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class='row_11'>
-
-                        <td class="textC">11</td>
-
-                        <td>
-                            <div class="image_thumb">
-                                <img src="../upload/product/product7.jpg" height="50">
-                                <div class="clear"></div>
-                            </div>
-
-                            <a href="product/view/8.html" class="tipS" title="" target="_blank">
-                                <b>Tivi JVC 500</b>
-                            </a>
-                        </td>
-
-                        <td class="textR">
-                            9,500,000 đ
-                            <p style='text-decoration:line-through'>10,000,000 đ</p>
-                        </td>
-
-                        <td class="textC">1</td>
-
-                        <td class="textC">10,000,000</td>
-
-
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
-
-                        <td class="status textC">
-                            <span class="completed">
-                                Thành công </span>
-                        </td>
-
-                        <td class="textC">13-08-2014</td>
-
-                        <td class="textC">
-                            <a href="admin/tran/view/12.html" class="lightbox">
-                                <img src="acsset/admin/images/icons/color/view.png" />
-                            </a>
-                        </td>
-                    </tr>
-
+                <?php endforeach ?>
                 </tbody>
 
             </table>

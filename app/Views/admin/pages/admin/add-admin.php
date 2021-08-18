@@ -10,7 +10,7 @@
 
             <div class="userNav">
                 <ul>
-                    <li><a href="http://localhost/webphp/" target="_blank">
+                    <li><a href="admin" target="_blank">
                             <img style="margin-top:7px;" src="acsset/admin/images/icons/light/home.png" />
                             <span>Trang chủ</span>
                         </a></li>

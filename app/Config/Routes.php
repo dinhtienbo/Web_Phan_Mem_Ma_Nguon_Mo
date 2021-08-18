@@ -110,6 +110,7 @@ $routes->group('admin',['filter'=>'adminFilter'], function ($routes) {
 	//Admin transaction
 	$routes->group('List-Transaction', function ($routes) {
 		$routes->get('', 'admin\AdminTransactionController::index');
+		$routes->get('View/(:num)', 'admin\AdminTransactionController::View/$1');
 		$routes->get('Delete/(:num)', 'admin\AdminTransactionController::Delete/$1');
 	});
 
