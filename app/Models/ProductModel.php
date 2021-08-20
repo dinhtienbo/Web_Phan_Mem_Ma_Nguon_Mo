@@ -70,4 +70,10 @@ class ProductModel extends BaseModel
         return $this->db->table($this->table)->like('name',$name)->get(4)->getResult();;
     }
 
+    public function sanphamcungtheloai($id)
+    {
+        $db = \Config\Database::connect();
+        return $this->db->table($this->table)->where('catalog_id',$id)->get(3)->getResult();;
+    }
+
 }

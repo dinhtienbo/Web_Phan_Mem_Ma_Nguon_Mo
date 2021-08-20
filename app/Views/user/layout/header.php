@@ -64,9 +64,9 @@
 					<div class="shop-menu pull-right">
 						<ul class="nav navbar-nav">
 							<?php if (session()->get('login')) : ?>
-								<li><a href="#"><i class="fa fa-user"></i><?= session()->get('login')['name'] ?></a></li>
+								<li><a href="account"><i class="fa fa-user"></i><?= session()->get('login')['name'] ?></a></li>
 							<?php elseif (session()->get('loginAdmin')) : ?>
-								<li><a href="#"><i class="fa fa-user"></i><?= session()->get('loginAdmin')['name'] ?></a></li>
+								<li><a href="account"><i class="fa fa-user"></i><?= session()->get('loginAdmin')['name'] ?></a></li>
 
 							<?php else : ?>
 								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
@@ -83,7 +83,6 @@
 							<?php else : ?>
 								<li><a href="login"><i class="fa fa-lock"></i> Login</a></li>
 							<?php endif ?>
-
 
 						</ul>
 					</div>
@@ -126,6 +125,9 @@
 							</li>
 							<li><a href="404.html">404</a></li>
 							<li><a href="contact">Contact</a></li>
+							<?php if (session()->get('login')) : ?>
+								<li><a href="account">Giao dịch</a></li>
+							<?php endif ?>
 						</ul>
 					</div>
 				</div>

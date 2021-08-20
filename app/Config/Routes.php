@@ -31,7 +31,7 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->group('/',['filter'=>'userFilter'], function ($routes) {
+$routes->group('/', ['filter' => 'userFilter'], function ($routes) {
 	$routes->get('', 'user\HomeController::index');
 	$routes->get('search', 'user\HomeController::search');
 
@@ -43,26 +43,33 @@ $routes->group('/',['filter'=>'userFilter'], function ($routes) {
 
 	//Cart-Checkout
 	$routes->group('cart', function ($routes) {
-	$routes->get('', 'user\CartController::cart');
-	$routes->get('checkout', 'user\CheckoutController::checkout');
-	$routes->get('add/(:num)', 'user\CartController::add/$1');
-	$routes->get('remove/(:num)', 'user\CartController::remove/$1');
-	$routes->post('upload', 'user\CartController::upload');
-	$routes->get('minus/(:num)', 'user\CartController::minus/$1');
-	$routes->post('thanhtoan', 'user\CheckoutController::thanhtoan');
+		$routes->get('', 'user\CartController::cart');
+		$routes->get('checkout', 'user\CheckoutController::checkout');
+		$routes->get('add/(:num)', 'user\CartController::add/$1');
+		$routes->get('remove/(:num)', 'user\CartController::remove/$1');
+		$routes->post('upload', 'user\CartController::upload');
+		$routes->get('minus/(:num)', 'user\CartController::minus/$1');
+		$routes->post('thanhtoan', 'user\CheckoutController::thanhtoan');
 	});
 
 	//Product
 	$routes->group('product', function ($routes) {
-	$routes->get('', 'user\ProductController::product');
-	$routes->get('category/(:any)', 'user\ProductController::listcategory/$1');
-	$routes->get('product-detail/(:any)', 'user\ProductDetailController::productdetail/$1');
+		$routes->get('', 'user\ProductController::product');
+		$routes->get('category/(:any)', 'user\ProductController::listcategory/$1');
+		$routes->get('product-detail/(:any)', 'user\ProductDetailController::productdetail/$1');
+	});
+
+
+	//Account
+	$routes->group('account', function ($routes) {
+		$routes->get('', 'user\AccountController::index');
+		$routes->get('view/(:num)', 'user\AccountController::view/$1');
 	});
 });
 
 
 //Admin
-$routes->group('admin',['filter'=>'adminFilter'], function ($routes) {
+$routes->group('admin', ['filter' => 'adminFilter'], function ($routes) {
 	$routes->get('', 'admin\AdminHomeController::index');
 
 	//Admin 
@@ -123,7 +130,6 @@ $routes->group('admin',['filter'=>'adminFilter'], function ($routes) {
 		$routes->post('EditUser/(:num)', 'admin\AdminUserController::Edit/$1');
 		$routes->get('Delete/(:num)', 'admin\AdminUserController::Delete/$1');
 	});
-
 });
 /*
  * --------------------------------------------------------------------

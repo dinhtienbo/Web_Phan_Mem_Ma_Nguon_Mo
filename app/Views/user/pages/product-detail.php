@@ -11,18 +11,18 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <?php foreach($list as $row) :?>
-                        <a href=""><img src="upload/product/<?= $row?>" width="65" height="65" alt=""></a>
+                        <?php foreach ($list as $row) : ?>
+                            <img src="upload/product/<?= $row ?>" width="65" height="65" alt="">
                         <?php endforeach ?>
                     </div>
                     <div class="item">
-                    <?php foreach($list as $row) :?>
-                        <a href=""><img src="upload/product/<?= $row?>"  width="65" height="65" alt=""></a>
+                        <?php foreach ($list as $row) : ?>
+                            <img src="upload/product/<?= $row ?>" width="65" height="65" alt="">
                         <?php endforeach ?>
                     </div>
                     <div class="item">
-                    <?php foreach($list as $row) :?>
-                        <a href=""><img src="upload/product/<?= $row?>" width="65" height="65" alt=""></a>
+                        <?php foreach ($list as $row) : ?>
+                            <img src="upload/product/<?= $row ?>" width="65" height="65" alt="">
                         <?php endforeach ?>
                     </div>
 
@@ -41,7 +41,7 @@
         <div class="col-sm-7">
             <div class="product-information">
                 <!--/product-information-->
-                <img src="acsset/user/images/product-details/new.jpg"  class="newarrival" alt="" />
+                <img src="acsset/user/images/product-details/new.jpg" class="newarrival" alt="" />
                 <h2><?= $product['name'] ?></h2>
 
                 <img src="acsset/user/images/product-details/rating.png" alt="" />
@@ -53,17 +53,18 @@
                         <?php else : ?>
                             <?php echo number_format($product['price']) ?> đ</b>
                         <?php endif; ?>
-                    </span>     
-                    <label>Quantity:</label>
-                    <input type="text" value="3" />
+                    </span>
+
                     <button type="button" class="btn btn-fefault cart">
-                        <i class="fa fa-shopping-cart"></i>
-                        Add to cart
+                        <a href="cart/add/<?= $product['id'] ?>">
+                            <i class="fa fa-shopping-cart"></i>
+                            Add to cart
+                        </a>
                     </button>
                 </span>
-                <p><b>Lượt xem:</b><?=$product['view']?></p>
-                <p><b>Lượt mua:</b> <?=$product['buyed']?></p>
-               
+                <p><b>Lượt xem:</b><?= $product['view'] ?></p>
+                <p><b>Lượt mua:</b> <?= $product['buyed'] ?></p>
+
                 <a href=""><img src="acsset/user/images/product-details/share.png" class="share img-responsive" alt="" /></a>
             </div>
             <!--/product-information-->
@@ -76,13 +77,13 @@
         <div class="col-sm-12">
             <ul class="nav nav-tabs">
                 <li><a href="#details" data-toggle="tab">Miêu tả</a></li>
-               
+
                 <li class="active"><a href="#reviews" data-toggle="tab">Đánh giá</a></li>
             </ul>
         </div>
         <div class="tab-content">
             <div class="tab-pane fade" id="details">
-              <textarea><?=$product['content']?></textarea>
+                <textarea><?= $product['content'] ?></textarea>
             </div>
 
 
@@ -121,80 +122,36 @@
         <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="item active">
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="acsset/user/images/home/recommend1.jpg" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                    <?php foreach ($productTitle as $row) : ?>
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="upload/product/<?= $row['image_link'] ?>" alt="" />
+                                        <h2>$<?= ($row['price'] - $row['discount']) ?></h2>
+                                        <p><?= $row['name'] ?></p>
+                                        <button type="button" class="btn btn-default add-to-cart"><a href="cart/add/<?= $row['id'] ?>"><i class="fa fa-shopping-cart"></i>Add to cart</a></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="acsset/user/images/home/recommend2.jpg" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="asset/user//home/recommend3.jpg" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach ?>
                 </div>
                 <div class="item">
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="acsset/user/images/home/recommend1.jpg" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                    <?php foreach ($productTitle as $row) : ?>
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+                                        <img src="upload/product/<?= $row['image_link'] ?>" alt="" />
+                                        <h2>$<?= ($row['price'] - $row['discount']) ?></h2>
+                                        <p><?= $row['name'] ?></p>
+                                        <button type="button" class="btn btn-default add-to-cart"><a href="cart/add/<?= $row['id'] ?>"><i class="fa fa-shopping-cart"></i>Add to cart</a></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="acsset/user/images/home/recommend2.jpg" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="acsset/user/images/home/recommend3.jpg" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach ?>
                 </div>
             </div>
             <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
