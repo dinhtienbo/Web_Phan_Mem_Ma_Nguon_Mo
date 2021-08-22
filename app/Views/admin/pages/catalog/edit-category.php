@@ -96,7 +96,7 @@
                             <select _autocheck="true" id="param_parent_id" name="parent_id">
                                 <option value="0">Là danh mục cha</option>
                                 <?php foreach ($list as $row) : ?>
-                                    <option value="<?= $row['id'] ?>"><?= $row['name'] ?></option>
+                                    <option value="<?= $row['id'] ?>"<?php echo ($row['id'] == $category['parent_id']) ? 'selected' : '';?>><?= $row['name']?></option>
                                 <?php endforeach; ?>
                             </select>
                         </span>

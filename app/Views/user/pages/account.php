@@ -6,12 +6,12 @@
                     <!--login form-->
                     <h2>Chỉnh sửa thông tin </h2>
                     <?= view('message/message') ?>
-                    <form action="" method="post">
-                        <input type="text" placeholder="Tên" name="name" />
-                        <input type="text" placeholder="Email Address" name="email" />
-                        <input type="password" placeholder="Điện thoại name" name="phone" />
-                        <input type="text" placeholder="Địa chỉ" name="address" />
-
+                    <form action="account/edit" method="post">
+                        <input type="text" placeholder="Tên" name="name" value="<?=$users['name'] ?>" />
+                        <input type="text" placeholder="Email Address" name="email" value="<?=$users['email'] ?>" />
+                        <input type="text" placeholder="Điện thoại name" name="phone" value="<?=$users['phone'] ?>" />
+                        <input type="text" placeholder="Địa chỉ" name="address" value="<?=$users['address'] ?>" />
+                        <input type="hidden" name="password" value="<?=$users['password'] ?>" />
                         <button type="submit" class="btn btn-default">Sửa thông tin</button>
                     </form>
                 </div>

@@ -64,6 +64,7 @@ $routes->group('/', ['filter' => 'userFilter'], function ($routes) {
 	$routes->group('account', function ($routes) {
 		$routes->get('', 'user\AccountController::index');
 		$routes->get('view/(:num)', 'user\AccountController::view/$1');
+		$routes->post('edit', 'user\AccountController::edit');
 	});
 });
 

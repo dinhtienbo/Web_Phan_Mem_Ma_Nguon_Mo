@@ -12,5 +12,6 @@ class UserModel extends BaseModel
         $db = \Config\Database::connect();
         return $this->db->table($this->table)->where('email',$email)->get()->getRow();
     }
+
 }
 ?>

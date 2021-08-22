@@ -144,7 +144,7 @@
                         <td style="width:60px;">Mã số</td>
                         <td style="width:175px;">Thành viên</td>
                         <td style="width:90px;">Số tiền</td>
-                        <td>Hình thức</td>
+                        <td style="width:175px;">Hình thức</td>
                         <td style="width:100px;">Giao dịch</td>
                         <td style="width:75px;">Ngày tạo</td>
                         <td style="width:55px;">Hành động</td>
