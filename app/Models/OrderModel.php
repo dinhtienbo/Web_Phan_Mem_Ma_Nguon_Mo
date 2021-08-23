@@ -27,5 +27,12 @@ class OrderModel extends BaseModel
         ->join('transaction','transaction.id=order.transaction_id')->where('transaction_id',$id)
         ->get()->getResult();
     }
+
+    //update
+    public function updateStatus($id,$data)
+    {
+        $db = \Config\Database::connect();
+        return $this->db->table($this->table)->where('id',$id)->update($data);
+    }
 }
 ?>

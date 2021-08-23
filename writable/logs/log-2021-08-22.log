@@ -23,3 +23,16 @@ CRITICAL - 2021-08-22 09:55:36 --> array_values(): Argument #1 ($array) must be 
 #4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
 #5 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
 #6 {main}
+CRITICAL - 2021-08-22 14:03:13 --> Undefined variable $row
+#0 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Views\admin\pages\list-order.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\PHP\\htdocs\\W...', 79)
+#1 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\PHP\\htdocs\\W...')
+#2 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/lis...', Array, true)
+#4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(89): view('admin/pages/lis...', Array)
+#5 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminOrderController.php(28): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/lis...', Array, Array, Array)
+#6 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminOrderController->index()
+#7 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminOrderController))
+#8 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
+#11 {main}

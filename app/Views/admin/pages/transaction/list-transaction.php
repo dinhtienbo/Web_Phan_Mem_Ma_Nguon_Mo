@@ -5,7 +5,7 @@
     <div class="topNav">
         <div class="wrapper">
             <div class="welcome">
-                <span>Xin chào: <b><?= session()->get('loginAdmin')['name']?></b></span>
+                <span>Xin chào: <b><?= session()->get('loginAdmin')['name'] ?></b></span>
             </div>
 
             <div class="userNav">
@@ -74,7 +74,7 @@
             <div class="title">
                 <span class="titleIcon"><input type="checkbox" id="titleCheck" name="titleCheck" /></span>
                 <h6>Danh sách Giao dịch</h6>
-                <div class="num f12">Tổng số: <b>15</b></div>
+                <div class="num f12">Tổng số: <b><?= count($list)?></b></div>
             </div>
 
             <table cellpadding="0" cellspacing="0" width="100%" class="sTable mTable myTable" id="checkAll">
@@ -144,8 +144,9 @@
                         <td style="width:60px;">Mã số</td>
                         <td style="width:175px;">Thành viên</td>
                         <td style="width:90px;">Số tiền</td>
-                        <td style="width:175px;">Hình thức</td>
+                        <td style="width:90px;">Hình thức</td>
                         <td style="width:100px;">Giao dịch</td>
+                        <td style="width:100px;">Trạng thái</td>
                         <td style="width:75px;">Ngày tạo</td>
                         <td style="width:55px;">Hành động</td>
                     </tr>
@@ -167,39 +168,52 @@
                 </tfoot>
 
                 <tbody class="list_item">
-                    <?php foreach($list as $row) :?>
-                    <tr class='row_21'>
-                        <td><input type="checkbox" name="id[]" value="21" /></td>
+                    <?php foreach ($list as $row) : ?>
+                        <tr class='row_21'>
+                            <td><input type="checkbox" name="id[]" value="21" /></td>
 
-                        <td class="textC"><?=$row['id']?></td>
+                            <td class="textC"><?= $row['id'] ?></td>
 
-                        <td>
-                            <?=$row['user_name']?>
-                        </td>
+                            <td>
+                                <?= $row['user_name'] ?>
+                            </td>
 
-                        <td class="textR red">$<?=$row['amount']?></td>
+                            <td class="textR red">$<?= $row['amount'] ?></td>
 
-                        <td>
-                        <?=$row['payment']?> </td>
+                            <td>
+                                <?= $row['payment'] ?> </td>
 
 
-                        <td class="status textC">
-                            <span class="pending">
-                                Chờ xử lý </span>
-                        </td>
+                            <td class="status textC">
+                                <span class="pending">
+                                    Chờ xử lý </span>
+                            </td>
 
-                        <td class="textC"><?=$row['created']?></td>
+                            <td>
+                                <?php if ($row['status'] == '0') : ?>
+                                    <button onclick="window.location.href='admin/List-Transaction/Process1/<?= $row['id'] ?>'">Chờ xử lý</button>
 
-                        <td class="textC">
-                            <a href="admin/List-Transaction/View/<?=$row['id']?>" class="lightbox">
-                                <img src="acsset/admin/images/icons/color/view.png" />
-                            </a>
+                                <?php endif ?>
+                                <?php if ($row['status'] == '1') : ?>
+                                    <button onclick="window.location.href='admin/List-Transaction/Process2/<?= $row['id'] ?>'">Giao hàng</button>
+                                <?php endif ?>
+                                <?php if ($row['status'] == '2') : ?>
+                                    <button>Thành công</button>
+                                <?php endif ?>
+                            </td>
 
-                            <a href="admin/List-Transaction/Delete/<?=$row['id']?>" title="Xóa" onClick="return confirm('Bạn có muốn xóa?')"  class="tipS verify_action">
-                                <img src="acsset/admin/images/icons/color/delete.png" />
-                            </a>
-                        </td>
-                    </tr>
+                            <td class="textC"><?= $row['created'] ?></td>
+
+                            <td class="textC">
+                                <a href="admin/List-Transaction/View/<?= $row['id'] ?>" class="lightbox">
+                                    <img src="acsset/admin/images/icons/color/view.png" />
+                                </a>
+
+                                <a href="admin/List-Transaction/Delete/<?= $row['id'] ?>" title="Xóa" onClick="return confirm('Bạn có muốn xóa?')" class="tipS verify_action">
+                                    <img src="acsset/admin/images/icons/color/delete.png" />
+                                </a>
+                            </td>
+                        </tr>
                     <?php endforeach ?>
                 </tbody>
 

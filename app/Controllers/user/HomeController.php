@@ -38,7 +38,7 @@ class HomeController extends BaseController
 
 		];
         $data = $this ->loadUserLayout($data,"Trang chủ","user/pages/index",'user/layout/left-menu',"user/layout/slide",$dataLayout);
-		return view('user\main',$data);
+		return view('user/main',$data);
 	}
 
 	public function search()
@@ -47,7 +47,7 @@ class HomeController extends BaseController
 		if($this->request->getMethod() == 'get')
 			$dataLayout['products'] = json_decode(json_encode($this -> product->searchName($this->request->getGet('search'))), True);
         $data = $this ->loadUserLayout($data,"Danh sách sản phẩm","user/pages/product","user/layout/left-menu","user/layout/slide",$dataLayout);
-		return view('user\main',$data);
+		return view('user/main',$data);
 		
 	}
 }

@@ -54,4 +54,5 @@
     <link rel="stylesheet" type="text/css" href="../js/jquery/colorbox/colorbox.css" media="screen" />
 
     <script type="text/javascript" src="../js/custom_admin.js" type="text/javascript"></script>
+    
 </head>

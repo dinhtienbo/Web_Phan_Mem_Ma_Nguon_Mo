@@ -113,4 +113,11 @@ class AccountController extends BaseController
             ];
         }
     }
+
+
+    public function Confirm($id)
+    {
+        $this->transaction->getFinal($id);
+        return redirect("account");
+    }
 }

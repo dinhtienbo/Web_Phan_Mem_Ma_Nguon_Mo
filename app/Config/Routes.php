@@ -65,6 +65,7 @@ $routes->group('/', ['filter' => 'userFilter'], function ($routes) {
 		$routes->get('', 'user\AccountController::index');
 		$routes->get('view/(:num)', 'user\AccountController::view/$1');
 		$routes->post('edit', 'user\AccountController::edit');
+		$routes->get('Confirm/(:num)', 'user\AccountController::Confirm/$1');
 	});
 });
 
@@ -107,7 +108,7 @@ $routes->group('admin', ['filter' => 'adminFilter'], function ($routes) {
 		$routes->post('EditProduct/(:num)', 'admin\AdminProductController::Edit/$1');
 		$routes->get('Delete/(:num)', 'admin\AdminProductController::Delete/$1');
 		//Search
-		$routes->post('Search', 'admin\AdminProductController::Search');
+		$routes->post('Search', 'admin\AdminProductController::Search');	
 	});
 
 	//Admin slide
@@ -120,6 +121,9 @@ $routes->group('admin', ['filter' => 'adminFilter'], function ($routes) {
 		$routes->get('', 'admin\AdminTransactionController::index');
 		$routes->get('View/(:num)', 'admin\AdminTransactionController::View/$1');
 		$routes->get('Delete/(:num)', 'admin\AdminTransactionController::Delete/$1');
+		$routes->get('Process1/(:num)', 'admin\AdminTransactionController::Process1/$1');
+		$routes->get('Process2/(:num)', 'admin\AdminTransactionController::Process2/$1');
+		
 	});
 
 	//Admin User

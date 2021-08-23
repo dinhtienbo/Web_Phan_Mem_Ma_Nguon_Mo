@@ -16,7 +16,7 @@
 
 
             <!--/register-req-->
-            <?php if (session()->get('login')) : ?>
+            <?php if (session()->get('login')['phone']) : ?>
 
             <?php else : ?>
                 <div class="shopper-informations">

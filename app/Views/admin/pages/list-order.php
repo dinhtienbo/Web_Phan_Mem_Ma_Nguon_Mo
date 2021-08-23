@@ -5,7 +5,7 @@
     <div class="topNav">
         <div class="wrapper">
             <div class="welcome">
-                <span>Xin chào: <b><?= session()->get('loginAdmin')['name']?></b></span>
+                <span>Xin chào: <b><?= session()->get('loginAdmin')['name'] ?></b></span>
             </div>
 
             <div class="userNav">
@@ -74,7 +74,7 @@
                 <span class="titleIcon"><img src="acsset/admin/images/icons/tableArrows.png" /></span>
                 <h6>Danh sách Đơn hàng sản phẩm</h6>
 
-                <div class="num f12">Tổng số: <b><?= count($orders)?></b></div>
+                <div class="num f12">Tổng số: <b><?= count($orders) ?></b></div>
             </div>
 
             <table cellpadding="0" cellspacing="0" width="100%" class="sTable mTable myTable" id="checkAll">
@@ -163,60 +163,64 @@
                 </tfoot>
 
                 <tbody class="list_item">
-                <?php foreach($orders as $row) :?>
-                    <tr class='row_20'>
+                    <?php foreach ($orders as $row) : ?>
+                        <tr class='row_20'>
 
-                        <td class="textC"><?=$row['id']?></td>
+                            <td class="textC"><?= $row['id'] ?></td>
 
-                        <td>
-                            <div class="image_thumb">
-                                <img src="/upload/product/<?= $row['image_link'] ?>" height="50">
-                                <div class="clear"></div>
-                            </div>
+                            <td>
+                                <div class="image_thumb">
+                                    <img src="/upload/product/<?= $row['image_link'] ?>" height="50">
+                                    <div class="clear"></div>
+                                </div>
 
-                            <a href="product/view/8.html" class="tipS" title="" target="_blank">
-                                <b><?= $row['name'] ?></b>
-                            </a>
-                        </td>
+                                <a href="product/view/8.html" class="tipS" title="" target="_blank">
+                                    <b><?= $row['name'] ?></b>
+                                </a>
+                            </td>
 
-                        <td class="textR">
-                            $<?= ($row['price'] - $row['discount']) ?>
-                            <p style='text-decoration:line-through'>$<?= $row['price'] ?></p>
-                        </td>
+                            <td class="textR">
+                                $<?= ($row['price'] - $row['discount']) ?>
+                                <p style='text-decoration:line-through'>$<?= $row['price'] ?></p>
+                            </td>
 
-                        <td class="textC"><?= $row['qty'] ?></td>
+                            <td class="textC"><?= $row['qty'] ?></td>
 
-                        <td class="textC">$<?= $row['amount'] ?></td>
+                            <td class="textC">$<?= $row['amount'] ?></td>
 
 
-                        <td class="status textC">
-                            <span class="pending">
-                                <?php if($row['status']==0) :?>
-                                    Chờ xử lý
+                            <td class="status textC">
+                                <?php if($row['status']=='0'):?>
+                                    <button >Chờ xử lý</button>
+                                    
                                 <?php endif ?>
-
-                            </span>
-                        </td>
-
-                        <td class="status textC">
-                            <span class="pending">
-                                <?php if($row['data']=='') :?>
-                                    Chờ xử lý
-                                <?php else : ?>
-                                    Đã thanh toán
+                                <?php if($row['status']=='1'):?>
+                                    <button >Giao hàng</button>
                                 <?php endif ?>
-                            </span>
-                        </td>
+                                <?php if($row['status']=='2'):?>
+                                    <button >Thành công</button>
+                                <?php endif ?>
+                            </td>
 
-                        <td class="textC"><?= $row['created'] ?></td>
+                            <td class="status textC">
+                                <span class="pending">
+                                    <?php if ($row['data'] == '') : ?>
+                                        Chờ xử lý
+                                    <?php else : ?>
+                                        Đã thanh toán
+                                    <?php endif ?>
+                                </span>
+                            </td>
 
-                        <td class="textC">
-                            <a href="admin/tran/view/21.html" class="lightbox">
-                                <img src="acsset/admin/images/icons/color/view.png" />
-                            </a>
-                        </td>
-                    </tr>
-                <?php endforeach ?>
+                            <td class="textC"><?= $row['created'] ?></td>
+
+                            <td class="textC">
+                                <a href="admin/tran/view/21.html" class="lightbox">
+                                    <img src="acsset/admin/images/icons/color/view.png" />
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
                 </tbody>
 
             </table>

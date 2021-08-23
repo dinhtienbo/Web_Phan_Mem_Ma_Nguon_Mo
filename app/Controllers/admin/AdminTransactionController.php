@@ -11,6 +11,7 @@ class AdminTransactionController extends BaseController
 {
 	private $transaction;
 	private $orders;
+	private $idOrder;
 	public function __construct()
     {
         parent::__construct();
@@ -31,7 +32,6 @@ class AdminTransactionController extends BaseController
 	{
 		$data=null;
 		$dataLayout['orders']=json_decode(json_encode( $this->orders->getAllId($id)), True);
-		
         $data = $this ->loadMastLayout($data,"Trang quản lý đơn hàng","admin/pages/list-order",$dataLayout,[],[]);
 		return view('admin/main',$data);
 	
@@ -43,4 +43,21 @@ class AdminTransactionController extends BaseController
 		$this->order->deleteTransaction($id);
         return redirect("admin/List-Transaction");
     }
+
+	public function Process1($id)
+	{
+		
+		$this->transaction->getShip($id);
+        
+		return redirect("admin/List-Transaction");
+	}
+
+	public function Process2($id)
+	{
+		
+		$this->transaction->getFinal($id);
+        
+		return redirect("admin/List-Transaction");
+	}
+
 }

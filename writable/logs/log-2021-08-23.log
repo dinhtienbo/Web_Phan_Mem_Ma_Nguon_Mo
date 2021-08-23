@@ -1,0 +1,48 @@
+CRITICAL - 2021-08-23 10:34:37 --> count(): Argument #1 ($var) must be of type Countable|array, null given
+#0 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/lis...', Array, true)
+#3 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(89): view('admin/pages/lis...', Array)
+#4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminTransactionController.php(53): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/lis...', Array, Array, Array)
+#5 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminTransactionController->Process1('30')
+#6 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminTransactionController))
+#7 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#9 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
+#10 {main}
+CRITICAL - 2021-08-23 10:35:27 --> count(): Argument #1 ($var) must be of type Countable|array, null given
+#0 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/lis...', Array, true)
+#3 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(89): view('admin/pages/lis...', Array)
+#4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminTransactionController.php(53): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/lis...', Array, Array, Array)
+#5 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminTransactionController->Process1('31')
+#6 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminTransactionController))
+#7 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#9 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
+#10 {main}
+CRITICAL - 2021-08-23 10:37:17 --> count(): Argument #1 ($var) must be of type Countable|array, null given
+#0 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/lis...', Array, true)
+#3 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(89): view('admin/pages/lis...', Array)
+#4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminTransactionController.php(53): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/lis...', Array, Array, Array)
+#5 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminTransactionController->Process1('33')
+#6 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminTransactionController))
+#7 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#9 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
+#10 {main}
+CRITICAL - 2021-08-23 10:40:40 --> count(): Argument #1 ($var) must be of type Countable|array, null given
+#0 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('admin/pages/lis...', Array, true)
+#3 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(89): view('admin/pages/lis...', Array)
+#4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\admin\AdminTransactionController.php(53): App\Controllers\BaseController->loadMastLayout(Array, 'Trang qu\xE1\xBA\xA3n l\xC3...', 'admin/pages/lis...', Array, Array, Array)
+#5 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\admin\AdminTransactionController->Process1('42')
+#6 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminTransactionController))
+#7 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#9 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
+#10 {main}
