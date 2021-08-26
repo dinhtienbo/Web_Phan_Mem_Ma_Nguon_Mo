@@ -111,10 +111,16 @@
 							<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
 								<ul role="menu" class="sub-menu">
 									<li><a href="product">Products</a></li>
-									<li><a href="product/product-detail">Product Details</a></li>
+
 									<li><a href="cart/checkout">Checkout</a></li>
 									<li><a href="cart">Cart</a></li>
-									<li><a href="login">Login</a></li>
+									<?php if (session()->get('login')) : ?>
+										<li><a href="logout"> Logout</a></li>
+									<?php elseif (session()->get('loginAdmin')) : ?>
+										<li><a href="logout">Logout</a></li>
+									<?php else : ?>
+										<li><a href="login"> Login</a></li>
+									<?php endif ?>
 								</ul>
 							</li>
 							<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
@@ -134,7 +140,7 @@
 				<div class="col-sm-3">
 					<div class="search_box pull-right">
 						<form action="search" method="get">
-						<input type="hidden" class="txt_csrfname" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" />
+							<input type="hidden" class="txt_csrfname" name="<?= csrf_token() ?>" value="<?= csrf_hash() ?>" />
 							<input type="text" placeholder="Search" name="search" />
 						</form>
 

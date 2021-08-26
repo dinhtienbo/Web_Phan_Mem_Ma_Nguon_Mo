@@ -168,11 +168,11 @@
                                         <?php if (count($row->subs) > 1) : ?>
                                             <optgroup label="<?php echo $row->name ?>">
                                                 <?php foreach ($row->subs as $sub) : ?>
-                                                    <option value="<?php echo $sub->id ?>"> <?php echo $sub->name ?> </option>
+                                                    <option value="<?php echo $sub->id ?>" <?php echo ($sub->id == $product->catalog_id) ? 'selected' : '';?>> <?php echo $sub->name ?> </option>
                                                 <?php endforeach; ?>
                                             </optgroup>
                                         <?php else : ?>
-                                            <option value="<?php echo $row->id ?>"><?php echo $row->name ?></option>
+                                            <option value="<?php echo $row->id ?>" <?php echo ($row->id == $product->catalog_id) ? 'selected' : '';?>><?php echo $row->name ?></option>
                                         <?php endif; ?>
                                     <?php endforeach; ?>
                                 </select>

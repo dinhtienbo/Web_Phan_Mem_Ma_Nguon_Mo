@@ -82,7 +82,7 @@
                 <thead class="filter">
                     <tr>
                         <td colspan="9">
-                            <form class="list_filter form" action="index.php/admin/tran.html" method="get">
+                            <form class="list_filter form" action="admin/List-Transaction/Search" method="post">
                                 <table cellpadding="0" cellspacing="0" width="100%">
                                     <tbody>
 
@@ -94,19 +94,19 @@
                                             <td class="item">
                                                 <select name="payment">
                                                     <option value=""></option>
-                                                    <option value='nganluong'>Ngân lượng</option>
-                                                    <option value='baokim'>Bảo kim</option>
-                                                    <option value='dathang'>Đặt hàng</option>
+                                                    <option value="">Chọn phương thức thanh toán</option>
+                                                    <option value="paypal">paypal</option>
+                                                    <option value="offline">Thanh toán khi nhận hàng</option>
                                                 </select>
                                             </td>
 
-                                            <td class="label" style="width:60px;"><label for="filter_created">Từ ngày</label></td>
-                                            <td class="item"><input name="created" value="" id="filter_created" type="text" class="datepicker" /></td>
+                                            
+                                           
 
 
                                             <td colspan='2' style='width:60px'>
                                                 <input type="submit" class="button blueB" value="Lọc" />
-                                                <input type="reset" class="basic" value="Reset" onclick="window.location.href = 'index.php/admin/tran.html'; ">
+                                                <input type="reset" class="basic" value="Reset" onclick="window.location.href = 'admin/List-Transaction'; ">
                                             </td>
 
                                         </tr>
@@ -119,14 +119,14 @@
                                             <td class="item">
                                                 <select name="status">
                                                     <option></option>
-                                                    <option value='0'>Đợi xử lý</option>
-                                                    <option value='1'>Thành công</option>
-                                                    <option value='2'>Hủy bỏ</option>
+                                                    <option value='0'>Chờ xử lý</option>
+                                                    <option value='1'>Giao hàng</option>
+                                                    <option value='2'>Thành công</option>
                                                 </select>
                                             </td>
 
-                                            <td class="label"><label for="filter_created_to">Đến ngày</label></td>
-                                            <td class="item"><input name="created_to" value="" id="filter_created_to" type="text" class="datepicker" /></td>
+                                           
+                                           
 
                                             <td class="label"></td>
                                             <td class="item"></td>

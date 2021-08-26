@@ -81,7 +81,7 @@
                 <thead class="filter">
                     <tr>
                         <td colspan="9">
-                            <form class="list_filter form" action="index.php/admin/product_order.html" method="get">
+                            <form class="list_filter form" action="admin/List-Order/Search" method="POST">
                                 <table cellpadding="0" cellspacing="0" width="100%">
                                     <tbody>
 
@@ -93,9 +93,9 @@
                                             <td class="item">
                                                 <select name="status">
                                                     <option value=""></option>
-                                                    <option value='0'>Đợi xử lý</option>
-                                                    <option value='1'>Đã gửi hàng</option>
-                                                    <option value='2'>Hủy bỏ</option>
+                                                    <option value='0'>Chờ xử lý</option>
+                                                    <option value='1'>Giao hàng</option>
+                                                    <option value='2'>Thành công</option>
                                                 </select>
                                             </td>
 
@@ -105,7 +105,7 @@
 
                                             <td colspan='2' style='width:60px'>
                                                 <input type="submit" class="button blueB" value="Lọc" />
-                                                <input type="reset" class="basic" value="Reset" onclick="window.location.href = 'index.php/admin/product_order.html'; ">
+                                                <input type="reset" class="basic" value="Reset" onclick="window.location.href = 'admin/List-Order'; ">
                                             </td>
 
                                         </tr>

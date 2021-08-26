@@ -34,5 +34,22 @@ class OrderModel extends BaseModel
         $db = \Config\Database::connect();
         return $this->db->table($this->table)->where('id',$id)->update($data);
     }
+
+    public function search($id,$name)
+    {
+        $db = \Config\Database::connect();
+        $sql1=[];
+        $sql2=[];
+        $sql3=[];
+        $sql4=[];
+        if($id>0 && $id!='')
+            $sql1= $this->db->table($this->table)->where('id',$id)->get()->getResult();
+        if($name!='')
+            $sql2= $this->db->table($this->table)->like('user_name',$name)->get()->getResult();
+        
+        $sql = array_merge($sql1,$sql2);//Gộp 2 lệnh sql
+        return $sql;
+    }
+
 }
 ?>

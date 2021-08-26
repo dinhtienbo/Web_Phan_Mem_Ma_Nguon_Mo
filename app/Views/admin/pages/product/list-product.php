@@ -238,12 +238,7 @@
                             <td class="textC"><?= $row->created ?></td>
 
                             <td class="option textC">
-                                <a href="" title="Gán là nhạc tiêu biểu" class="tipE">
-                                    <img src="acsset/admin/images/icons/color/star.png" />
-                                </a>
-                                <a href="product/view/9.html" target='_blank' class='tipS' title="Xem chi tiết sản phẩm">
-                                    <img src="acsset/admin/images/icons/color/view.png" />
-                                </a>
+                                
                                 <a href="admin/List-Product/Edit/<?= $row->id ?>" title="Chỉnh sửa" class="tipS">
                                     <img src="acsset/admin/images/icons/color/edit.png" />
                                 </a>

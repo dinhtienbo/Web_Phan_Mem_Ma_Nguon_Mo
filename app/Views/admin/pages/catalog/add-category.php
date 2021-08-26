@@ -82,7 +82,7 @@
                 <div class="formRow">
                     <label for="param_name" class="formLeft">Tên:<span class="req">*</span></label>
                     <div class="formRight">
-                        <span class="oneTwo"><input type="text" _autocheck="true" id="param_name"  name="name"></span>
+                        <span class="oneTwo"><input type="text" _autocheck="true" id="param_name" value="<?= old('name') ?>"  name="name"></span>
                         <span class="autocheck" name="name_autocheck"></span>
                         <div class="clear error" name="name_error"></div>
                     </div>
@@ -109,7 +109,7 @@
                 <div class="formRow">
                     <label for="param_name" class="formLeft">Thứ tự hiển thị:</label>
                     <div class="formRight">
-                        <span class="oneTwo"><input type="text" _autocheck="true" id="param_sort_order"  name="sort_order"></span>
+                        <span class="oneTwo"><input type="text" _autocheck="true" id="param_sort_order" value="<?= old('sort_order') ?>"  name="sort_order"></span>
                         <span class="autocheck" name="sort_order_autocheck"></span>
                         <div class="clear error" name="sort_order_error"></div>
                     </div>
@@ -119,7 +119,7 @@
                 <div class="formRow">
                     <label for="param_name" class="formLeft">Từ khóa:</label>
                     <div class="formRight">
-                        <span class="oneTwo"><input type="text" _autocheck="true" id="param_sort_order"  name="meta_key"></span>
+                        <span class="oneTwo"><input type="text" _autocheck="true" id="param_sort_order" value="<?= old('meta_key') ?>"  name="meta_key"></span>
                         <span class="autocheck" name="sort_order_autocheck"></span>
                         <div class="clear error" name="sort_order_error"></div>
                     </div>

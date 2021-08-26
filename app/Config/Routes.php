@@ -97,6 +97,7 @@ $routes->group('admin', ['filter' => 'adminFilter'], function ($routes) {
 	//Admin order
 	$routes->group('List-Order', function ($routes) {
 		$routes->get('', 'admin\AdminOrderController::index');
+		$routes->post('Search', 'admin\AdminTransactionController::Search');
 	});
 
 	//Admin Product
@@ -114,6 +115,9 @@ $routes->group('admin', ['filter' => 'adminFilter'], function ($routes) {
 	//Admin slide
 	$routes->group('List-Slide', function ($routes) {
 		$routes->get('', 'admin\AdminSlideController::index');
+		$routes->get('Add', 'admin\AdminSlideController::Add');
+		$routes->post('Create', 'admin\AdminSlideController::Create');
+		$routes->get('Delete/(:num)', 'admin\AdminSlideController::Delete/$1');
 	});
 
 	//Admin transaction
@@ -123,6 +127,7 @@ $routes->group('admin', ['filter' => 'adminFilter'], function ($routes) {
 		$routes->get('Delete/(:num)', 'admin\AdminTransactionController::Delete/$1');
 		$routes->get('Process1/(:num)', 'admin\AdminTransactionController::Process1/$1');
 		$routes->get('Process2/(:num)', 'admin\AdminTransactionController::Process2/$1');
+		$routes->post('Search', 'admin\AdminTransactionController::Search');
 		
 	});
 

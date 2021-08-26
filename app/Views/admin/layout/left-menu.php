@@ -69,7 +69,7 @@
 
                 <a href="admin/List-User" class=" exp">
                     <span>Tài khoản</span>
-                    <strong>3</strong>
+                    <strong>2</strong>
                 </a>
 
                 <ul class="sub">
@@ -77,10 +77,7 @@
                         <a href="admin/List-Admin">
                             Ban quản trị </a>
                     </li>
-                    <li>
-                        <a href="admin/List-GroupAdmin">
-                            Nhóm quản trị </a>
-                    </li>
+                   
                     <li>
                         <a href="admin/List-User">
                             Thành viên </a>

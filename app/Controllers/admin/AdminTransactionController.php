@@ -60,4 +60,15 @@ class AdminTransactionController extends BaseController
 		return redirect("admin/List-Transaction");
 	}
 
+	public function Search()
+	{
+		$data = [];
+		$dataLayout=[];
+		
+		$dataLayout['list'] = json_decode(json_encode($this->transaction->Search($this->request->getPost('id'),$this->request->getPost('user'),$this->request->getPost('payment'),$this->request->getPost('status'))), True); //Chuyển object thành mảng
+
+		$data = $this ->loadMastLayout($data,"Trang quản lý giao dịch","admin/pages/transaction/list-transaction",$dataLayout,[],[]);
+		return view('admin/main',$data);
+	}
+
 }
