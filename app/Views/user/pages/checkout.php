@@ -16,8 +16,41 @@
 
 
             <!--/register-req-->
-            <?php if (session()->get('login')['phone']) : ?>
+            <?php if (session()->get('login')) : ?>
+                <?php if (session()->get('login')['phone']) : ?>
 
+                    <?php else : ?>
+                <div class="shopper-informations">
+                    <div class="row">
+
+                        <div class="col-sm-8 clearfix">
+                            <div class="bill-to">
+                                <p>Thông tin</p>
+                                <div class="form-one">
+                                    <input type="text" placeholder="Tên khách hàng" name='name'>
+
+                                    <input type="text" placeholder="Điện thoại *" name="phone">
+
+                                </div>
+                                <div class="form-two">
+
+                                    <input type="text" placeholder="Email*" name='email'>
+                                    <input type="text" placeholder="Địa chỉ" name='address'>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="order-message">
+                                <p>Shipping Order</p>
+                                <textarea name="message" placeholder="Notes about your order, Special Notes for Delivery" rows="16"></textarea>
+                                <label><input type="checkbox"> Shipping to bill address</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
             <?php else : ?>
                 <div class="shopper-informations">
                     <div class="row">

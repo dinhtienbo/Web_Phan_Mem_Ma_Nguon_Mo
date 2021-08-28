@@ -1,0 +1,13 @@
+CRITICAL - 2021-08-26 09:16:41 --> Trying to access array offset on value of type null
+#0 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Views\user\pages\checkout.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'D:\\PHP\\htdocs\\W...', 19)
+#1 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(230): include('D:\\PHP\\htdocs\\W...')
+#2 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Common.php(1271): CodeIgniter\View\View->render('user/pages/chec...', Array, true)
+#4 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\BaseController.php(78): view('user/pages/chec...', Array)
+#5 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\app\Controllers\user\CheckoutController.php(46): App\Controllers\BaseController->loadUserLayout(Array, 'Th\xE1\xBB\xA7 t\xE1\xBB\xA5c tha...', 'user/pages/chec...', '', '', Array)
+#6 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(928): App\Controllers\user\CheckoutController->checkout()
+#7 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(436): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\user\CheckoutController))
+#8 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\public\index.php(38): CodeIgniter\CodeIgniter->run()
+#10 D:\PHP\htdocs\Web_Phan_Mem_Ma_Nguon_Mo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('D:\\PHP\\htdocs\\W...')
+#11 {main}
