@@ -27,7 +27,7 @@ class CartController extends BaseController
 		if($session->has('cart'))
 			$dataLayout['items'] = array_values(session('cart'));
         $data = $this ->loadUserLayout($data,"Giỏ hàng","user/pages/cart","","",$dataLayout);
-		return view('user\main',$data);
+		return view('user/main',$data);
 	}
 
 	public function add($id)

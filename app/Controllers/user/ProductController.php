@@ -25,7 +25,7 @@ class ProductController extends BaseController
         $data=null;
 		$dataLayout['products'] = json_decode(json_encode($this->product->getList()), True);
         $data = $this ->loadUserLayout($data,"Danh sách sản phẩm","user/pages/product","user/layout/left-menu","user/layout/slide",$dataLayout);
-		return view('user\main',$data);
+		return view('user/main',$data);
 	}
     public function listcategory($meta_key)
     {
@@ -36,6 +36,6 @@ class ProductController extends BaseController
             return redirect('/');
         }
         $data = $this ->loadUserLayout($data,"Danh sách sản phẩm","user/pages/product","user/layout/left-menu","user/layout/slide",$dataLayout);
-		return view('user\main',$data);
+		return view('user/main',$data);
     }
 }

@@ -38,7 +38,7 @@ class AccountController extends BaseController
             $dataLayout['users'] = json_decode(json_encode($this->users->getById($user['0'])), True);
             $data = null;
             $data = $this->loadUserLayout($data, "Tài khoản", "user/pages/account", "", "", $dataLayout);
-            return view('user\main', $data);
+            return view('user/main', $data);
         }
     }
 
@@ -47,7 +47,7 @@ class AccountController extends BaseController
         $dataLayout['items'] = json_decode(json_encode($this->orders->getAllId($id)), True);
         $data = null;
         $data = $this->loadUserLayout($data, "Tài khoản", "user/pages/viewtransaction", "", "", $dataLayout);
-        return view('user\main', $data);
+        return view('user/main', $data);
     }
 
     public function edit()

@@ -31,6 +31,6 @@ class ProductDetailController extends BaseController
             'productTitle'=>$productTile
         );
         $data = $this ->loadUserLayout($data,"Chi tiết sản phẩm","user/pages/product-detail","user/layout/left-menu","",$dataLayout);
-		return view('user\main',$data);
+		return view('user/main',$data);
 	}
 }

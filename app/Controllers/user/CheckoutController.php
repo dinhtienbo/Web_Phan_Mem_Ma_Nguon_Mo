@@ -44,7 +44,7 @@ class CheckoutController extends BaseController
 			$dataLayout['total']=0;
 		}
 		$data = $this->loadUserLayout($data, "Thủ tục thanh toán", "user/pages/checkout", "", "", $dataLayout);
-		return view('user\main', $data);
+		return view('user/main', $data);
 	}
 
 	public function thanhtoan()

@@ -5,7 +5,7 @@ use App\Controllers\BaseController;
 use Exception;
 use App\Models\AdminModel;
 use App\Models\UserModel;
-Use App\Common\ResultUtils;
+use App\Common\ResultUtils;
 
 
 class LoginController extends BaseController
@@ -38,7 +38,7 @@ class LoginController extends BaseController
 
         $data=null;
         $data = $this ->loadUserLayout($data,"Đăng nhập - Đăng ký","user/pages/login","","");
-		return view('user\main',$data);
+		return view('user/main',$data);
 	}
 
 	public function checklogin()
